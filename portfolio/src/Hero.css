@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Uncut Sans Bold';
+    src: url('/src/assets/fonts/UncutSans-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Uncut Sans Book';
+    src: url('/src/assets/fonts/UncutSans-Book.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans Bold';
+    src: url('/src/assets/fonts/GeneralSans-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    height: 100vh;
+    /* padding: 0 40px; */
+    color: #CCC5B9;
+    text-align: left;
+    margin-top: 200px;
+    margin-left: 110px;
+}
+
+.hero-title {
+    font-family: "General Sans Bold";
+    font-size: 95.91px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero-description {
+    font-family: "Uncut Sans Book";
+    font-size: 23.99px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.hero-description1 {
+    font-family: "Uncut Sans Book";
+    font-size: 23.99px;
+    margin: 0px;
+}
+
+
+

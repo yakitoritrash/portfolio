@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Uncut Sans Regular';
+    src: url('/src/assets/fonts/UncutSans-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: transparent;
+    color: #EDE6CF;
+    font-family: 'Uncut Sans Regular';
+    font-weight: 100;
+    font-size: 23.99px;
+    line-height: normal;
+    letter-spacing: 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.logo span{
+    font-size: 23.99px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 54px;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 71px;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+.orangetext {
+    color: #BE5F3B;
+}
+
+.whitetext {
+    color: #EDE6CF;
+}
