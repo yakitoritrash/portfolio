@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Uncut Sans Bold';
+    src: url('/src/assets/fonts/UncutSans-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Uncut Sans Book';
+    src: url('/src/assets/fonts/UncutSans-Book.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans Bold';
+    src: url('/src/assets/fonts/GeneralSans-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.pagemainsection {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 66px;
+}
+
+.resumephoto{
+    left: 110px;
+    top: 954px;
+    width: 418px;
+    height: 528px;
+}
+
+.photo-title{
+    font-family: "General Sans Bold";
+    font-size: 95.91px;
+    font-weight: bold;
+    margin: 0;
+    width: 558px;
+    height: 105px;
+    top: 954px;
+    left: 594px;
+    color: #CCC5B9;
+    text-align: left;
+}
+
+.about-description{
+    font-family: "Uncut Sans Book";
+    font-size: 23.99px;
+    /* margin-top: 20px;
+    margin-bottom: 0px; */
+    width: 583px;
+    height: 145px;
+    top: 1077px;
+    left: 594px;
+    color: #EDE6CF;
+    text-align: left;
+}
+
+.callme{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 8px;
+}
+
+.whiteme{
+    font-family: "Uncut Sans Book";
+    font-size: 23.99px;
+    color: #EDE6CF;
+    /* left: 594px;
+    top: 1269px; */
+    margin: 0;
+}
+
+.orangeme {
+    text-decoration: none;
+    font-family: "Uncut Sans Book";
+    font-size: 23.99px;
+    color: #EB5E28;
+    /* top: 1269px; */
+    margin: 0; 
+}
+
+.orangeme::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: #BE5F3B;
+    display: block;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.orangeme:hover::after{
+    opacity: 1;
+}
+
+.aboutme{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

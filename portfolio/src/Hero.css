@@ -26,10 +26,13 @@
     align-items: flex-start;
     height: 100vh;
     /* padding: 0 40px; */
-    color: #CCC5B9;
+    
     text-align: left;
-    margin-top: 200px;
-    margin-left: 110px;
+    /* margin-top: 200px;
+    margin-left: 110px; */
+    position: relative;
+    top: 215px;
+    left: 110px;
 }
 
 .hero-title {
@@ -37,7 +40,9 @@
     font-size: 95.91px;
     font-weight: bold;
     margin: 0;
-    width: 30%;
+    width: 989px;
+    height: 242px;
+    color: #CCC5B9;
 }
 
 .hero-description {
@@ -45,5 +50,7 @@
     font-size: 23.99px;
     margin-top: 20px;
     margin-bottom: 0px;
-    width: 30%;
+    width: 583px;
+    height: 87px;
+    color: #EDE6CF;
 }
