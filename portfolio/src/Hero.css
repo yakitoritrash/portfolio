@@ -37,6 +37,7 @@
     font-size: 95.91px;
     font-weight: bold;
     margin: 0;
+    width: 30%;
 }
 
 .hero-description {
@@ -44,13 +45,5 @@
     font-size: 23.99px;
     margin-top: 20px;
     margin-bottom: 0px;
+    width: 30%;
 }
-
-.hero-description1 {
-    font-family: "Uncut Sans Book";
-    font-size: 23.99px;
-    margin: 0px;
-}
-
-
-
