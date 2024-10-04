@@ -26,8 +26,8 @@
 .logo span{
     font-size: 23.99px;
     display: inline-block;
-    margin-right: 8px;
-    margin-left: 54px;
+    /* margin-right: 8px; */
+    /* margin-left: 54px; */
 }
 .logo {
     margin-left: 42px;
@@ -36,11 +36,13 @@
 .nav-links{
     display: flex;
     list-style: none;
+    justify-content: center;
+    gap: 71px;
 }
 
-.nav-links li {
+/* .nav-links li {
     margin-left: 71px;
-}
+} */
 
 .nav-links a {
     text-decoration: none;

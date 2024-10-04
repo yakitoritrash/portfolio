@@ -25,11 +25,16 @@
     flex-direction: row;
     justify-content:center;
     gap: 66px;
+    /* top: 954px; */
+    flex-wrap: wrap;
+    /* height: 100vh; */
+    margin-top: 800px;
+    margin-bottom: 0px;
 }
 
 .resumephoto{
     left: 110px;
-    top: 954px;
+    /* top: 954px; */
     width: 418px;
     height: 528px;
 }
@@ -39,9 +44,9 @@
     font-size: 95.91px;
     font-weight: bold;
     margin: 0;
-    width: 558px;
+    /* width: 558px; */
     height: 105px;
-    top: 954px;
+
     left: 594px;
     color: #CCC5B9;
     text-align: left;
@@ -54,7 +59,7 @@
     margin-bottom: 0px; */
     width: 583px;
     height: 145px;
-    top: 1077px;
+    /* top: 1077px; */
     left: 594px;
     color: #EDE6CF;
     text-align: left;
