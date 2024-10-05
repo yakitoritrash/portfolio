@@ -19,6 +19,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Uncut Sans Semibold';
+    src: url('/src/assets/fonts/UncutSans-Semibold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .page3{
     display: flex;
     flex-direction: column;
@@ -36,5 +43,71 @@
     top: 1970px;
     left: 110px;
     color: #CCC5B9;
-    
+}
+
+.tiles{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 60px;
+    justify-content: center;
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 512px;
+    width: 512px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card::before {
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+    z-index: 2;
+
+}
+
+
+.card-title {
+    font-family: 'Uncut Sans Bold';
+    font-size: 50px;
+    color: #ffffff;
+    padding-bottom: 21px;
+    text-align: left;
+    margin-left: 17px;
+    margin-top: 29px;
+}
+
+/* Styling for the card descriptions */
+.card-description {
+    font-family: 'Uncut Sans Semibold';
+    font-size: 22px;
+    color: #9E9E9E;
+    text-align: left;
+    margin-left: 17px;
+}
+
+/* Add subtle hover effect to the cards */
+.card:hover .card-title {
+    color: #ffffff;
 }

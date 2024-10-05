@@ -4,6 +4,7 @@ import resumephoto from "../src/assets/images/photo.jpg";
 
 
 const Page2 = () => {
+
     return(
         <div className="pagemainsection">
             <div className="photo">
