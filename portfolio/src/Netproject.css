@@ -44,6 +44,7 @@
     /* width: 600px; */
     /* height: 242px; */
     color: #CCC5B9;
+    margin: 0;
 }
 
 .tiles{
@@ -59,7 +60,7 @@
 .card{
     background-color: rgba(255, 255, 255, 0.0);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    height: 125px;
+    height: 100%;
     width: 100%;
     border-radius: 10px;
     cursor: pointer;
@@ -86,7 +87,7 @@
     top: 0px;
     transition: opacity 500ms;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
 
 }
 
@@ -95,10 +96,9 @@
     font-family: 'Uncut Sans Bold';
     font-size: 50px;
     color: #ffffff;
-    padding-bottom: 21px;
+    padding-bottom: 10px;
     text-align: left;
     margin-left: 17px;
-    margin-top: 29px;
 }
 
 /* Styling for the card descriptions */
@@ -110,6 +110,7 @@
     margin-left: 17px;
     margin-bottom: 29px;
     margin-top: 0px;
+    padding-bottom: 17px;
 }
 
 /* Add subtle hover effect to the cards */
