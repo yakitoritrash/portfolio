@@ -6,7 +6,7 @@ import resumephoto from "../src/assets/images/photo.jpg";
 const Page2 = () => {
 
     return(
-        <div className="pagemainsection">
+        <div id="about-section" className="pagemainsection">
             <div className="photo">
             <img src = {resumephoto} alt = "me:)" className='resumephoto' />
             </div>

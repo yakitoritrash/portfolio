@@ -1,12 +1,14 @@
 import React from 'react';
 import './Navbar.css'
 import logo from "./assets/images/logo.png"
+import { Link as RouterLink} from 'react-router-dom';
+// import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
     return(
         <nav className='navbar'>
             <div className='logo'>
-                <a href="#home"><img src = {logo} alt = "Logo" className='logo.png' /></a>
+                <RouterLink to= "/"><img src = {logo} alt = "Logo" className='logo.png' /></RouterLink>
             </div>
             <ul className='nav-links'>
                 <li><a href="#about" className='whitetext'>about</a></li>
