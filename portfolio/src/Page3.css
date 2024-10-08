@@ -63,10 +63,14 @@
     cursor: pointer;
     position: relative;
     padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    will-change: transform; /* Optimizes the animation performance */
+
 }
 
 .page3 .card:hover::before {
     opacity: 1;
+    filter: blur(10px); 
 }
 
 .page3 .card::before {
@@ -85,6 +89,7 @@
     transition: opacity 500ms;
     width: 100%;
     z-index: 2;
+    transition: opacity 500ms, filter 500ms;
 
 }
 
@@ -111,4 +116,9 @@
 /* Add subtle hover effect to the cards */
 .page3 .card:hover .card-title {
     color: #ffffff;
+}
+
+.page3 .card:hover {
+    transform: scale(1.005); /* Scale up the card slightly */
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2); /* Adds a shadow effect */
 }
