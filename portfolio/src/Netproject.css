@@ -66,10 +66,13 @@
     cursor: pointer;
     position: relative;
     padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    will-change: transform; /* Optimizes the animation performance */
 }
 
 .card:hover::before {
     opacity: 1;
+    filter: blur(10px); 
 }
 
 .card::before {
@@ -88,13 +91,14 @@
     transition: opacity 500ms;
     width: 100%;
     z-index: 1;
+    transition: opacity 500ms, filter 1000ms;
 
 }
 
 
 .card-title {
     font-family: 'Uncut Sans Bold';
-    font-size: 50px;
+    font-size: 32px;
     color: #ffffff;
     padding-bottom: 10px;
     text-align: left;
@@ -116,4 +120,9 @@
 /* Add subtle hover effect to the cards */
 .card:hover .card-title {
     color: #ffffff;
+}
+
+.card:hover {
+    transform: scale(1.005); /* Scale up the card slightly */
+    /* box-shadow: 0 8px 10px rgba(255, 255, 255, 0.2); Adds a shadow effect */
 }
