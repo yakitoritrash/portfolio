@@ -7,6 +7,7 @@ import MalwareBlog from './MalwareBlog'; // Import your MalwareBlog component
 import Navbar from './Navbar'; // Assuming you have a Navbar component
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
+import Awsvpn from './Awsvpn';
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function ConditionalRoutes() {
         <Route path="/" element={<Page3 />} />
         <Route path="/network" element={<Netproject />} />
         <Route path="/blog/malware" element={<MalwareBlog />} />
-        <Route path="/blog/cloud-networking" element={<MalwareBlog />} />
+        <Route path="/blog/aws-openvpn" element={<Awsvpn />} />
         <Route path="/blog/firewall-setup" element={<MalwareBlog />} />
       </Routes>
     </>
