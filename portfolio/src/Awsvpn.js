@@ -7,23 +7,36 @@ const Awsvpn = () => {
             <h1>Setting Up a Secure OpenVPN Server on AWS.</h1>
             <h2>Summary</h2>
             <p>
-                In this project, I created a secure malware analysis environment by setting up two virtual machines (VMs): a Windows 10 VM that I converted into FLARE VM and a REMnux VM. The two VMs were isolated from external networks, only allowing communication between them via a custom virtual network configuration. The REMnux VM was configured as the DNS server for the FLARE VM. This setup enabled safe and controlled malware analysis by ensuring that the malware within the FLARE VM couldn't communicate with anything beyond the isolated virtual network.
+            The primary goal of this project was to establish a secure and encrypted communication channel for remote access to internal network resources. By leveraging AWS and OpenVPN, I was able to create a robust VPN solution that ensures data privacy and security.
             </p>
             <h2>Project Details</h2>
             <p>
-                The primary goal of this project was to create a controlled environment for analyzing malware without risking the security of the external network. By isolating the VMs, I ensured that any malicious activity would be contained within the virtual network.
+            The project involved several key steps to set up the OpenVPN server on AWS:
             </p>
+            <ul>
+            <li>Set up a Windows 10 VM and converted it into a FLARE VM.</li>
+                <li>Launching an EC2 Instance: I started by launching an EC2 instance on AWS. I chose an appropriate instance type and Amazon Machine Image (AMI) that supports OpenVPN installation.</li>
+                <li>Configuring Security Groups: To allow VPN traffic, I configured the security groups associated with the EC2 instance. This involved opening the necessary ports for OpenVPN (typically UDP port 1194) and ensuring that only trusted IP addresses could access the server.</li>
+                <li>Installing OpenVPN: Once the EC2 instance was up and running, I connected to it via SSH and installed OpenVPN. This involved updating the package repository and installing the OpenVPN package using the package manager.</li>
+                <li>Configuring OpenVPN: After installation, I configured OpenVPN by generating the necessary encryption keys and certificates. I also set up the server configuration file to define the VPN parameters, such as the network range for VPN clients and the encryption settings.</li>
+                <li>Starting the OpenVPN Service: With the configuration in place, I started the OpenVPN service and ensured it was running correctly. I also configured the service to start automatically on system boot.</li>
+                <li>Client Configuration: To connect to the VPN, I generated client configuration files and distributed them to the users. These files included the necessary certificates and keys for secure authentication.</li>
+            </ul>
             <h2>Steps Involved</h2>
             <ul>
-                <li>Set up a Windows 10 VM and converted it into a FLARE VM.</li>
-                <li>Set up a REMnux VM for malware analysis tools.</li>
-                <li>Configured a custom virtual network to isolate the VMs from external networks.</li>
-                <li>Configured the REMnux VM as the DNS server for the FLARE VM.</li>
-                <li>Tested the setup to ensure that the FLARE VM could only communicate with the REMnux VM.</li>
+                <li>Launch an EC2 Instance: Choose an appropriate instance type and AMI.
+                    {/* <img src=''></img> */}
+                </li>
+                <li>Configure Security Groups: Open UDP port 1194 and restrict access to trusted IP addresses.</li>
+                <li>Install OpenVPN: Update the package repository and install OpenVPN.</li>
+                <li>Configure OpenVPN: Generate encryption keys and certificates, and set up the server configuration file.</li>
+                <li>Start the OpenVPN Service: Start the service and configure it to start on boot.</li>
+                <li>Client Configuration: Generate and distribute client configuration files.</li>
+
             </ul>
             <h2>Conclusion</h2>
             <p>
-                This setup provides a safe and controlled environment for malware analysis, allowing for in-depth examination of malicious software without the risk of it spreading to other systems. The isolated virtual network ensures that any communication attempts by the malware are contained within the lab environment.
+            Setting up a secure OpenVPN server on AWS provides a reliable and encrypted connection for remote access to internal network resources. This setup ensures that data transmitted over the internet is protected from potential eavesdroppers, maintaining privacy and security. By following the steps outlined in this project, you can create a robust VPN solution that meets your remote access needs.
             </p>
         </div>
     );
