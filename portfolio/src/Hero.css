@@ -34,6 +34,7 @@
     top: 215px;
     left: 110px;
     overflow: hidden;
+    height: 40vh;
 }
 
 .hero-title {

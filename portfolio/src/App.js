@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useEffect } from 'react';
 import Hero from './Hero';
 import Page2 from './Page2';
 import Page3 from './Page3';
@@ -11,11 +12,28 @@ import Awsvpn from './Awsvpn';
 import CloudProject from './Cloudproject';
 import NtfyBlog from './Ntfyblog';
 
+const ScrollToHashElement = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+      if (hash) {
+          const element = document.getElementById(hash.substring(1));
+          if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+          }
+      }
+  }, [hash]);
+
+  return null;
+};
+
+
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
+        <ScrollToHashElement />
         <ConditionalRoutes />
       </div>
     </Router>
@@ -43,6 +61,7 @@ function ConditionalRoutes() {
       )}
 
       <Routes>
+        <Route path='/about' Component={Page2} />
         <Route path="/" element={<Page3 />} />
         <Route path="/network" element={<Netproject />} />
         <Route path="/cloud" element={<CloudProject />} />
