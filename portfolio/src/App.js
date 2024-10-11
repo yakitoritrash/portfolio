@@ -8,6 +8,8 @@ import Navbar from './Navbar'; // Assuming you have a Navbar component
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import Awsvpn from './Awsvpn';
+import CloudProject from './Cloudproject';
+import NtfyBlog from './Ntfyblog';
 
 function App() {
   return (
@@ -43,9 +45,10 @@ function ConditionalRoutes() {
       <Routes>
         <Route path="/" element={<Page3 />} />
         <Route path="/network" element={<Netproject />} />
-        <Route path="/blog/malware" element={<MalwareBlog />} />
+        <Route path="/cloud" element={<CloudProject />} />
+        <Route path="/blog/malware-analysis-lab" element={<MalwareBlog />} />
         <Route path="/blog/aws-openvpn" element={<Awsvpn />} />
-        <Route path="/blog/firewall-setup" element={<MalwareBlog />} />
+        <Route path="/blog/ntfy-setup" element={<NtfyBlog />} />
       </Routes>
     </>
   );

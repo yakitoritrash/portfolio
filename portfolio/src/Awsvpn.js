@@ -1,6 +1,14 @@
 import './MalwareBlog.css';
 import React from 'react';
 
+// Create a context for the images
+const images = require.context('./assets/images/awsopenvpnblog', false, /\.(png|jpe?g|svg)$/);
+
+// Function to get the image by name
+const getImage = (imageName) => {
+    return images(`./${imageName}`);
+};
+
 const Awsvpn = () => {
     return (
         <div className="blog-container">
@@ -25,13 +33,29 @@ const Awsvpn = () => {
             <h2>Steps Involved</h2>
             <ul>
                 <li>Launch an EC2 Instance: Choose an appropriate instance type and AMI.
-                    {/* <img src=''></img> */}
+                <div className='images'>
+                    <img className='img' src={getImage('1.png')} alt='awsec2' />
+                </div>
                 </li>
                 <li>Configure Security Groups: Open UDP port 1194 and restrict access to trusted IP addresses.</li>
                 <li>Install OpenVPN: Update the package repository and install OpenVPN.</li>
+                <div className='images'>
+                    <img className='img' src={getImage('2.png')} alt='openvpnsetup' />
+                    <img className='img' src={getImage('3.png')} alt='openvpn' />
+                </div>
                 <li>Configure OpenVPN: Generate encryption keys and certificates, and set up the server configuration file.</li>
+                <div className='images'>
+                    <img className='img' src={getImage('4.png')} alt='vpnmanage' />
+                    <img className='img' src={getImage('5.png')} alt='vpndownload' />
+                </div>
                 <li>Start the OpenVPN Service: Start the service and configure it to start on boot.</li>
+                <div className='images'>
+                    <img className='img' src={getImage('6.png')} alt='vpn' />
+                </div>
                 <li>Client Configuration: Generate and distribute client configuration files.</li>
+                <div className='images'>
+                    <img className='img' src={getImage('7.png')} alt='test' />
+                </div>
 
             </ul>
             <h2>Conclusion</h2>

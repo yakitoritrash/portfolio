@@ -2,12 +2,11 @@ import React, { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Netproject.css';
 
-const Netproject = () => {
+const CloudProject = () => {
     const navigate = useNavigate();
     const cardsData = [
-        { title: 'Malware Analysis Lab with Isolated Virtual Network Setup', description: "In this project, I created a secure malware analysis environment by setting up two virtual machines (VMs): a Windows 10 VM that I converted into FLARE VM and a REMnux VM. The two VMs were isolated from external networks, only allowing communication between them via a custom virtual network configuration. The REMnux VM was configured as the DNS server for the FLARE VM. This setup enabled safe and controlled malware analysis by ensuring that the malware within the FLARE VM couldn't communicate with anything beyond the isolated virtual network.", path: '/malware-analysis-lab' },
         { title: 'Setting Up a Secure OpenVPN Server on AWS', description: 'In this project, I set up a secure OpenVPN server on Amazon Web Services (AWS) to provide a reliable and encrypted connection for remote access. The setup involved launching an EC2 instance, configuring security groups to allow VPN traffic, and installing and configuring OpenVPN on the server. This setup ensures secure and private communication over the internet, protecting data from potential eavesdroppers and providing remote access to internal network resources.', path: '/aws-openvpn' },
-        { title: 'Firewall Setup', description: 'Set up a firewall for protection.', path: '/firewall-setup' },
+        { title: 'Setting up ntfy on Linode', description: 'In this project, I set up ntfy, a simple and powerful notification service, on a Linode server and connected it to my Android device. This setup allows me to receive real-time notifications from my terminal directly on my Android device, enhancing my workflow and ensuring I never miss important updates.', path: '/ntfy-setup' },
         { title: 'Network Security', description: 'Learn about securing networks.', path: '/network-security' },
         { title: 'Cloud Networking', description: 'Explore cloud networking solutions.', path: '/cloud-networking' },
         { title: 'Firewall Setup', description: 'Set up a firewall for protection.', path: '/firewall-setup' },
@@ -41,7 +40,7 @@ const Netproject = () => {
     return (
         <>  
             <div className="network">
-                <h1 className="network-title">SECURITY & NETWORKING.</h1>
+                <h1 className="network-title">CLOUD.</h1>
             </div>
             <div className="tiles">
                 {cardsData.map((card, index) => (
@@ -63,4 +62,4 @@ const Netproject = () => {
     );
 };
 
-export default Netproject;
+export default CloudProject;
