@@ -11,6 +11,8 @@ import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import Awsvpn from './Awsvpn';
 import CloudProject from './Cloudproject';
 import NtfyBlog from './Ntfyblog';
+import Designproject from './Designproject';
+import Everydayphotoshop from './Everydayphotoshop';
 
 const ScrollToHashElement = () => {
   const { hash } = useLocation();
@@ -41,9 +43,11 @@ function App() {
       <Routes>
         <Route path="/network" element={<Netproject />} />
         <Route path="/cloud" element={<CloudProject />} />
+        <Route path="/design" element={<Designproject />} />
         <Route path="/blog/malware-analysis-lab" element={<MalwareBlog />} />
         <Route path="/blog/aws-openvpn" element={<Awsvpn />} />
         <Route path="/blog/ntfy-setup" element={<NtfyBlog />} />
+        <Route path="/blog/everyday-photoshop" element={<Everydayphotoshop />} />
       </Routes>
     </Router>
   );
