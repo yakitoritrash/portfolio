@@ -6,7 +6,7 @@ import resumephoto from "../src/assets/images/photo.jpg";
 const Page2 = () => {
 
     return(
-        <div id="about-section" className="pagemainsection">
+        <section id="about-section" className="pagemainsection">
             <div className="photo">
             <img src = {resumephoto} alt = "me:)" className='resumephoto' />
             </div>
@@ -18,7 +18,7 @@ const Page2 = () => {
                     <a href="contact" className="orangeme">Drop me a line.</a>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

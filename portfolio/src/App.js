@@ -33,9 +33,18 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <ScrollToHashElement />
-        <ConditionalRoutes />
+        <div className='Main_Page'>
+          <ScrollToHashElement />
+          <ConditionalRoutes />
+        </div>
       </div>
+      <Routes>
+        <Route path="/network" element={<Netproject />} />
+        <Route path="/cloud" element={<CloudProject />} />
+        <Route path="/blog/malware-analysis-lab" element={<MalwareBlog />} />
+        <Route path="/blog/aws-openvpn" element={<Awsvpn />} />
+        <Route path="/blog/ntfy-setup" element={<NtfyBlog />} />
+      </Routes>
     </Router>
   );
 }
@@ -63,11 +72,6 @@ function ConditionalRoutes() {
       <Routes>
         <Route path='/about' Component={Page2} />
         <Route path="/" element={<Page3 />} />
-        <Route path="/network" element={<Netproject />} />
-        <Route path="/cloud" element={<CloudProject />} />
-        <Route path="/blog/malware-analysis-lab" element={<MalwareBlog />} />
-        <Route path="/blog/aws-openvpn" element={<Awsvpn />} />
-        <Route path="/blog/ntfy-setup" element={<NtfyBlog />} />
       </Routes>
     </>
   );

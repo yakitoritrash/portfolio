@@ -58,7 +58,7 @@ const Page3 = () => {
     ];
 
     return (
-        <section className="page3">
+        <section className="page3" id = "works">
             <h1 className="works-title">MY WORKS.</h1>
             <div className="tiles">
                 {cardsData.map((card, index) => (
