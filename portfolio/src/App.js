@@ -14,6 +14,7 @@ import NtfyBlog from './Ntfyblog';
 import Designproject from './Designproject';
 import Everydayphotoshop from './Everydayphotoshop';
 
+
 const ScrollToHashElement = () => {
   const { hash } = useLocation();
 
@@ -39,16 +40,17 @@ function App() {
           <ScrollToHashElement />
           <ConditionalRoutes />
         </div>
+        <Routes>
+          <Route path="/network" element={<Netproject />} />
+          <Route path="/cloud" element={<CloudProject />} />
+          <Route path="/design" element={<Designproject />} />
+          <Route path="/blog/malware-analysis-lab" element={<MalwareBlog />} />
+          <Route path="/blog/aws-openvpn" element={<Awsvpn />} />
+          <Route path="/blog/active-directory" element={<Awsvpn />} />
+          <Route path="/blog/ntfy-setup" element={<NtfyBlog />} />
+          <Route path="/blog/everyday-photoshop" element={<Everydayphotoshop />} />
+        </Routes>
       </div>
-      <Routes>
-        <Route path="/network" element={<Netproject />} />
-        <Route path="/cloud" element={<CloudProject />} />
-        <Route path="/design" element={<Designproject />} />
-        <Route path="/blog/malware-analysis-lab" element={<MalwareBlog />} />
-        <Route path="/blog/aws-openvpn" element={<Awsvpn />} />
-        <Route path="/blog/ntfy-setup" element={<NtfyBlog />} />
-        <Route path="/blog/everyday-photoshop" element={<Everydayphotoshop />} />
-      </Routes>
     </Router>
   );
 }
@@ -70,12 +72,15 @@ function ConditionalRoutes() {
           <motion.div style={{ y: y2 }}>
             <Page2 />
           </motion.div>
-        </>
+            {/* <Page3 /> */}
+
+        </> 
       )}
 
       <Routes>
         <Route path='/about' Component={Page2} />
         <Route path="/" element={<Page3 />} />
+        {/* <Route path='/' element= {<Page4 />} /> */}
       </Routes>
     </>
   );

@@ -126,3 +126,16 @@
     transform: scale(1.005); /* Scale up the card slightly */
     /* box-shadow: 0 8px 10px rgba(255, 255, 255, 0.2); Adds a shadow effect */
 }
+
+.go-to-link-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #9E9E9E;
+}
+
+.card:hover .go-to-link-icon{
+    color: #BE5F3B;
+    animation-duration: 1000ms;
+}
