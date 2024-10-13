@@ -13,6 +13,7 @@ import CloudProject from './Cloudproject';
 import NtfyBlog from './Ntfyblog';
 import Designproject from './Designproject';
 import Everydayphotoshop from './Everydayphotoshop';
+import Uptimekumablog from './Uptimekumablog';
 
 
 const ScrollToHashElement = () => {
@@ -49,6 +50,7 @@ function App() {
           <Route path="/blog/active-directory" element={<Awsvpn />} />
           <Route path="/blog/ntfy-setup" element={<NtfyBlog />} />
           <Route path="/blog/everyday-photoshop" element={<Everydayphotoshop />} />
+          <Route path="/blog/uptime-kuma-setup" element= {<Uptimekumablog />} />
         </Routes>
       </div>
     </Router>
