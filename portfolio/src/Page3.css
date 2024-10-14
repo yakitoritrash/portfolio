@@ -135,7 +135,6 @@
 
         width: 90%;
         height: auto;
-        margin: 10px;
         padding: 15px;
 
     }
@@ -146,6 +145,7 @@
         gap: 20px;
         justify-content: center;
         align-items: center;
+        padding: 10px;
     }
 
     .page3 .card-title {
