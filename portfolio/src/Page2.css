@@ -63,6 +63,7 @@
     left: 594px;
     color: #EDE6CF;
     text-align: left;
+    flex-wrap: wrap;
 }
 
 .callme{
@@ -108,4 +109,99 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+@media (max-width: 425px) {
+
+    .about-description{
+        width: auto;
+        font-size: 16px;
+        height: auto;
+        left: auto;
+        text-align: center;
+    }
+
+    .orangeme, .whiteme{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .callme{
+        text-align: center;
+        align-items: center;
+        margin: auto;
+    }
+    .photo-title{
+        font-size: 50px;
+        height: 100%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .aboutme .resumephoto{
+        margin: 30px;
+    }
+    
+    .pagemainsection{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+        margin: 20px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .resumephoto{
+        width: 200px;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) and (min-width:425px) {
+
+    .about-description{
+        width: auto;
+        font-size: 20px;
+        height: auto;
+        left: auto;
+        text-align: center;
+    }
+
+    .orangeme, .whiteme{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .callme{
+        text-align: center;
+        align-items: center;
+        margin: auto;
+    }
+    .photo-title{
+        font-size: 60px;
+        height: 100%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .aboutme .resumephoto{
+        margin: 20px;
+    }
+    
+    .pagemainsection{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+        margin: 20px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .resumephoto{
+        width: 300px;
+        height: auto;
+    }
+
 }

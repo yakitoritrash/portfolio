@@ -139,3 +139,93 @@
     color: #BE5F3B;
     animation-duration: 1000ms;
 }
+
+@media (max-width: 425px) {
+
+    .network{
+        left: 0;
+        margin: 20px;
+    }
+
+    .network-title{
+        font-size: 40px;
+        height: auto;
+        width: 100%;
+        }
+
+    .card{
+
+        width: 90%;
+        height: auto;
+        padding: 15px;
+
+    }
+
+
+    .tiles{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .card-description{
+        font-size: 16px;
+        margin-left: 0px;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 600px) and (min-width: 425px) {
+
+    .network{
+        left: 0;
+        margin: 20px;
+    }
+
+    .network-title{
+        font-size: 50px;
+        height: auto;
+        width: 100%;
+        }
+
+    .card{
+
+        width: 90%;
+        height: auto;
+        padding: 15px;
+
+    }
+
+
+    .tiles{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .card-description{
+        font-size: 16px;
+        margin-left: 0px;
+        text-align: center;
+    }
+    
+}

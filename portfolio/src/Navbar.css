@@ -1,11 +1,5 @@
-@font-face {
-    font-family: 'Uncut Sans Regular';
-    src: url('/src/assets/fonts/UncutSans-Regular.otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.navbar { 
+/* Default styles */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,26 +17,16 @@
     z-index: 1000;
 }
 
-.logo span{
-    font-size: 23.99px;
-    display: inline-block;
-    /* margin-right: 8px; */
-    /* margin-left: 54px; */
-}
 .logo {
-    margin-left: 42px;
+    margin-left: 0; /* Remove margin for better alignment */
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     list-style: none;
     justify-content: center;
     gap: 71px;
 }
-
-/* .nav-links li {
-    margin-left: 71px;
-} */
 
 .nav-links a {
     text-decoration: none;
@@ -56,30 +40,84 @@
     color: #EDE6CF;
 }
 
-.orangetext::after {
+.orangetext::after, .whitetext::after {
     content: '';
     height: 1px;
     width: 100%;
-    background-color: #BE5F3B;
     display: block;
     opacity: 0;
     transition: all 0.3s;
 }
 
-.orangetext:hover::after{
-    opacity: 1;
+.orangetext::after {
+    background-color: #BE5F3B;
 }
 
 .whitetext::after {
-    content: '';
-    height: 1px;
-    width: 100%;
     background-color: #EDE6CF;
-    display: block;
-    opacity: 0;
-    transition: all 0.3s;
 }
 
-.whitetext:hover::after{
+.orangetext:hover::after,
+.whitetext:hover::after {
     opacity: 1;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    background-color: #EDE6CF;
+    height: 3px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Hide the nav-links by default on small screens */
+.nav-links-mobile {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.nav-links-mobile a {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 10px 20px; /* Reduce padding for smaller screens */
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 10px; /* Reduce margin for better alignment */
+    }
+
+    .hamburger {
+        display: flex;
+        margin-right: 10px; /* Align hamburger to the right */
+    }
+
+    .nav-links-mobile.active {
+        display: flex;
+    }
 }

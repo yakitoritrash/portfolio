@@ -1,29 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import logo from "./assets/images/logo.png";
 import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
-import { animateScroll as scroll } from 'react-scroll';
 
 const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
-
         if (section) {
-            const sectionPosition = section.getBoundingClientRect();
-            const isInViewport = sectionPosition.top >= 0 && sectionPosition.bottom <= window.innerHeight;
-
-            if (!isInViewport) {
-                scroll.scrollTo(section.offsetTop - 100, {
-                    duration: 500,
-                    smooth: true,
-                });
-            }
-        } else {
-            // Retry after a short delay if the section is not found
-            setTimeout(() => scrollToSection(sectionId), 100);
+            section.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
@@ -54,7 +46,24 @@ const Navbar = () => {
             <div className='logo'>
                 <RouterLink to="/"><img src={logo} alt="Logo" className='logo.png' /></RouterLink>
             </div>
+
+            {/* Hamburger for small screens */}
+            <div className='hamburger' onClick={toggleMenu}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            {/* Default nav links */}
             <ul className='nav-links'>
+                <li><span onClick={handleAboutClick} className='whitetext'>about</span></li>
+                <li><span onClick={handleWorksClick} className='whitetext'>works</span></li>
+                <li><span onClick={handleResumeClick} className='whitetext'>résumè</span></li>
+                <li><RouterLink to="/#contact" className="orangetext">contact</RouterLink></li>
+            </ul>
+
+            {/* Mobile nav links */}
+            <ul className={`nav-links-mobile ${menuOpen ? 'active' : ''}`}>
                 <li><span onClick={handleAboutClick} className='whitetext'>about</span></li>
                 <li><span onClick={handleWorksClick} className='whitetext'>works</span></li>
                 <li><span onClick={handleResumeClick} className='whitetext'>résumè</span></li>

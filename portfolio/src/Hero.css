@@ -32,7 +32,7 @@
     margin-left: 110px; */
     position: relative;
     top: 215px;
-    left: 110px;
+    margin-left: 110px;
     overflow: hidden;
     height: 70vh;
 }
@@ -59,42 +59,55 @@
     flex-wrap: wrap;
 }
 
-
-@media (max-width: 768px) {
-    .hero {
-        top: 100px; /* Adjust the top margin */
-        left: 20px; /* Reduce left padding for small screens */
-        align-items: center;
-    }
-
-    .hero-title {
-        font-size: 50px; /* Adjust font size for small screens */
-        width: 100%; /* Make the title take up full width */
-        text-align: center;
-    }
-
-    .hero-description {
-        font-size: 18px; /* Adjust font size for small screens */
-        width: 90%; /* Make description take up more width */
-        text-align: center;
-    }
-}
-
 /* Media query for very small screens */
-@media (max-width: 480px) {
+@media (max-width: 425px) {
     .hero {
         top: 50px;
-        left: 10px;
+        /* left: 10px; */
         align-items:flex-start;
+        margin-left: 20px;
     }
 
     .hero-title {
-        font-size: 40px; /* Further reduce font size */
-        align-items:flex-start;
+        font-size: 50px; /* Further reduce font size */
+        /* align-items:flex-start; */
+        text-align: left;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
     }
 
     .hero-description {
         font-size: 16px;
         align-items:flex-start;
+        width: 100%;
     }
 }
+
+
+
+
+@media (max-width: 600px) and (min-width: 425px) {
+    .hero {
+        top: 50px;
+        /* left: 10px; */
+        align-items:flex-start;
+        margin-left: 20px;
+    }
+
+    .hero-title {
+        font-size: 50px; /* Further reduce font size */
+        /* align-items:flex-start; */
+        text-align: left;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        align-items:flex-start;
+        width: 100%;
+    }
+}
+

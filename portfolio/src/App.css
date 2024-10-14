@@ -49,5 +49,22 @@ body {
   display: flex;
   flex-direction: column;
   gap: 300px;
+  width: 100%;
 }
 
+
+@media (max-width: 425px) {
+
+  .Main_Page{
+    gap: 100px;
+  }
+
+}
+
+@media (min-width: 425px) and (max-width: 600px) {
+
+  .Main_Page{
+    gap: 200px;
+  }
+
+}

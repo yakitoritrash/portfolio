@@ -122,3 +122,83 @@
     transform: scale(1.005); /* Scale up the card slightly */
     box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2); /* Adds a shadow effect */
 }
+
+@media (max-width: 427px) {
+    .page3 .works-title{
+        font-size: 50px;
+        height: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .page3 .card{
+
+        width: 90%;
+        height: auto;
+        margin: 10px;
+        padding: 15px;
+
+    }
+
+
+    .page3 .tiles{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page3 .card-title {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .page3 .card-description{
+        font-size: 16px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 427px) and (max-width: 600px) {
+    .page3 .works-title{
+        font-size: 60px;
+        height: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .page3 .card{
+
+        width: 90%;
+        height: auto;
+        margin: 10px;
+        padding: 15px;
+
+    }
+
+
+    .page3 .tiles{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page3 .card-title {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .page3 .card-description{
+        font-size: 20px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+}
