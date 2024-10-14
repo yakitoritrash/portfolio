@@ -89,12 +89,13 @@
     right: 0;
     width: 100%;
     padding: 20px 0;
+    height:max-content;
 }
 
 .nav-links-mobile a {
-    padding: 15px;
+    /* padding: 15px; */
     text-align: center;
-    color: white;
+    color: #BE5F3B;
     text-decoration: none;
 }
 

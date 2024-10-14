@@ -14,6 +14,7 @@ import NtfyBlog from './Ntfyblog';
 import Designproject from './Designproject';
 import Everydayphotoshop from './Everydayphotoshop';
 import Uptimekumablog from './Uptimekumablog';
+import Page4 from './Page4';
 
 
 const ScrollToHashElement = () => {
@@ -74,15 +75,16 @@ function ConditionalRoutes() {
           <motion.div style={{ y: y2 }}>
             <Page2 />
           </motion.div>
-            {/* <Page3 /> */}
+            <Page3 />
+            <Page4 />
 
         </> 
       )}
 
       <Routes>
         <Route path='/about' Component={Page2} />
-        <Route path="/" element={<Page3 />} />
-        {/* <Route path='/' element= {<Page4 />} /> */}
+        {/* <Route path="/" element={<Page3 />} />
+        <Route path='/' element= {<Page4 />} /> */}
       </Routes>
     </>
   );

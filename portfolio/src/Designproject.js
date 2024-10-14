@@ -10,13 +10,9 @@ const Designproject = () => {
         { title: 'Personal Portfolio', description: 'In this project, I designed and developed my personal portfolio website from scratch using React, Framer Motion. The project highlights my proficiency in modern web development practices, with a focus on clean design, responsiveness, and smooth user experience. The portfolio serves as a showcase for my work and projects..', path: '/' },
         { title: 'Network Ping Utility Web App', description: 'In this project, I developed a web application using the Bottle framework in Python. The application allows users to input an IP address or domain name via the URL, and the app performs a ping operation to provide detailed information about the address. This tool is useful for network diagnostics and monitoring, offering a simple and intuitive interface for users to check the reachability and response time of networked devices.', path: 'https://github.com/yakitoritrash/ping_project' },
         { title: 'Multi-Ping Utility Web App', description: 'In this project, I extended the functionality of the Network Ping Utility Web App to allow users to input multiple IP addresses or domain names via the URL. The application performs simultaneous ping operations on all the provided addresses and returns detailed information for each. This tool is useful for network diagnostics and monitoring, offering a convenient way to check the reachability and response time of multiple networked devices at once.', path: 'https://github.com/yakitoritrash/multi_ping' },
-        { title: 'Setting Up a Secure OpenVPN Server on AWS', description: 'In this project, I set up a secure OpenVPN server on Amazon Web Services (AWS) to provide a reliable and encrypted connection for remote access. The setup involved launching an EC2 instance, configuring security groups to allow VPN traffic, and installing and configuring OpenVPN on the server. This setup ensures secure and private communication over the internet, protecting data from potential eavesdroppers and providing remote access to internal network resources.', path: '/aws-openvpn' },        
-        { title: 'Network Security', description: 'Learn about securing networks.', path: '/network-security' },
-        { title: 'Cloud Networking', description: 'Explore cloud networking solutions.', path: '/cloud-networking' },
-        { title: 'Firewall Setup', description: 'Set up a firewall for protection.', path: '/firewall-setup' },
-        { title: 'Network Security', description: 'Learn about securing networks.', path: '/network-security' },
-        { title: 'Cloud Networking', description: 'Explore cloud networking solutions.', path: '/cloud-networking' },
-        { title: 'Firewall Setup', description: 'Set up a firewall for protection.', path: '/firewall-setup' },
+        { title: 'Flight Management Web App', description: 'In this project, I built a flight management web application using Django and SQLite. The application allows users to manage flight schedules, book tickets, and view flight details. The backend is powered by Django, and the database is managed using SQLite, providing a lightweight and efficient solution for managing flight data.', path: 'https://github.com/yakitoritrash/airline' },        
+        { title: 'Etch A Sketch Game', description: 'In this project, I developed an Etch A Sketch-like game using JavaScript. The game allows users to draw on a grid, and they can change the grid size to create more detailed or larger drawings. This project demonstrates my skills in JavaScript and DOM manipulation.', path: 'https://yakitoritrash.github.io/etch-a-sketch/' },
+        { title: 'Currency Exchange Web App', description: 'In this project, I developed a currency exchange web application using JavaScript. The application allows users to input a currency code and fetch the latest exchange rate for USD to the specified currency using the CurrencyAPI. This project demonstrates my skills in JavaScript, API integration, and DOM manipulation.', path: 'https://yakitoritrash.github.io/currency/' },
     ];
 
     const cardRefs = useRef([]);
@@ -63,7 +59,7 @@ const Designproject = () => {
                         <div className="card-content"></div>
                         <div className="card-title">{card.title}</div>
                         <div className="card-description">{card.description}</div>
-                        {(card.title === "Network Ping Utility Web App" || card.title === "Personal Portfolio" || card.title === "Multi-Ping Utility Web App") && (
+                        {(card.title === "Network Ping Utility Web App" || card.title === "Personal Portfolio" || card.title === "Multi-Ping Utility Web App" || card.title === "Flight Management Web App" || card.title === "Etch A Sketch Game" || card.title === "Currency Exchange Web App") && (
                             <BsArrowUpRight className="go-to-link-icon" />
                         )}
                     </div>

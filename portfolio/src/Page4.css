@@ -1,0 +1,292 @@
+@font-face {
+    font-family: 'Uncut Sans Bold';
+    src: url('/src/assets/fonts/UncutSans-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Uncut Sans Book';
+    src: url('/src/assets/fonts/UncutSans-Book.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'General Sans Bold';
+    src: url('/src/assets/fonts/GeneralSans-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Uncut Sans Semibold';
+    src: url('/src/assets/fonts/UncutSans-Semibold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.Contact_Page{
+    display: flex;
+    flex-direction: row;
+    padding: 70px;
+    padding-bottom: 40px;
+    gap: auto;
+    justify-content: space-between;
+    height: 650px;
+}
+
+.LeftPage{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.TopLeft .BottomLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.TopLeft{
+    gap: 70px;
+}
+
+.Heading{
+    font-family: "General Sans Bold";
+    font-size: 95.91px;
+    font-weight: bold;
+    margin: 0;
+    /* width: 558px; */
+    /* height: 100%; */
+    /* top: 1970px;
+    left: 110px; */
+    color: #CCC5B9;
+    margin-bottom: 20px;
+}
+
+.subtitle{
+    font-family: "Uncut Sans Book";
+    font-size: 23.99px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: auto;
+    color: #EDE6CF;
+    flex-wrap: wrap;
+}
+
+.up .down{
+    flex-direction: column;
+    display: flex;
+    align-content: flex-start;
+}
+
+.SubHeading{
+    font-family: "General Sans Bold";
+    font-size: 50px;
+    color: #BE5F3B;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Input and Textarea Styling */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    position: relative;
+    font-size: 18px;
+    color: #CCC5B9; /* Assuming light text on dark background */
+    height: max-content;
+}
+
+/* Change the underline to orange on focus */
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-bottom-color: #BE5F3B;
+    outline: none;
+}
+
+/* Placeholder styling */
+input::placeholder, textarea::placeholder {
+    font-size: 18px;
+    color: #CCC5B9;
+    text-align: left    ; /* Align placeholder to the right */
+    font-family: 'Uncut Sans Book';
+}
+
+/* Focus state for the placeholder (active input state) */
+input:focus::placeholder, textarea:focus::placeholder {
+    color: #BE5F3B; /* Change color to orange when active */
+    font-size: 16px; /* Make it smaller when active */
+    font-family: 'Uncut Sans Book';
+    transition-duration: 5000ms;
+}
+
+/* Textarea specific styling */
+textarea {
+    resize: vertical;
+    height: 100px;
+    border-bottom: 2px solid #ccc;
+    transition: border-color 0.3s;
+    background-color: transparent;
+    width: 500px;
+    font-family: 'Uncut Sans Book';
+}
+
+/* Submit button styling */
+.submit-button {
+    padding: 10px 15px;
+    background-color: #BE5F3B;
+    color: white;
+    border: solid #BE5F3B;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100px;
+    align-items: right;
+    font-family: 'General Sans Bold';
+}
+
+.submit-button:hover {
+    background-color: #252422;
+    border: solid #BE5F3B;
+    border-radius: 1px;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+
+@media (max-width:425px) {
+    .Contact_Page{
+        flex-direction: column;
+        padding: 0;
+        margin: 20px;
+        gap: 20px;
+    }
+
+    .Heading{
+        font-size: 50px;
+        height: auto;
+    }
+
+    .subtitle{
+        font-size: 16px;
+    }
+
+    .BottomLeft{
+        flex-direction: row;
+    }
+
+    .SubHeading{
+        font-size: 20px;
+    }
+    .LeftPage{
+        gap: 20px;
+    }
+
+    textarea{
+        width: 100%;
+    }
+    .contact-form{
+        margin-top: 40px;
+    }
+
+    #Contact{
+        gap: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#Contact{
+    gap: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:600px) and (min-width:425px) {
+    .Contact_Page{
+        flex-direction: column;
+        padding: 0;
+        margin: 20px;
+        gap: 20px;
+    }
+
+    .Heading{
+        font-size: 50px;
+        height: auto;
+    }
+
+    .subtitle{
+        font-size: 16px;
+    }
+
+    .BottomLeft{
+        flex-direction: row;
+    }
+
+    .SubHeading{
+        font-size: 20px;
+    }
+    .LeftPage{
+        gap: 20px;
+    }
+
+    textarea{
+        width: 100%;
+    }
+    .contact-form{
+        margin-top: 40px;
+    }
+
+}
+
+@media (max-width:1054px) and (min-width:600px) {
+    .Contact_Page{
+        flex-direction: column;
+        padding: 0;
+        margin: 20px;
+        gap: 20px;
+    }
+
+    .Heading{
+        font-size: 90px;
+        height: auto;
+    }
+
+    .subtitle{
+        font-size: 20px;
+    }
+
+    .BottomLeft{
+        flex-direction: row;
+    }
+
+    .SubHeading{
+        font-size: 20px;
+    }
+    .LeftPage{
+        gap: 20px;
+    }
+
+    textarea{
+        width: 100%;
+    }
+    .contact-form{
+        margin-top: 40px;
+    }
+
+}

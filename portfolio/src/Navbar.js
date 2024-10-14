@@ -41,10 +41,19 @@ const Navbar = () => {
         window.open('/assets/files/myresume.pdf', '_blank');
     };
 
+    const handleContactClick = () => {
+        if (location.pathname !== "/") {
+            navigate("/", { replace: true });
+            setTimeout(() => scrollToSection("Contact"), 100);
+        } else {
+            scrollToSection("Contact");
+        }
+    };
+
     return (
         <nav className='navbar'>
             <div className='logo'>
-                <RouterLink to="/"><img src={logo} alt="Logo" className='logo.png' /></RouterLink>
+                <RouterLink to="https://kushagradwivedi.tech"><img src={logo} alt="Logo" className='logo.png' /></RouterLink>
             </div>
 
             {/* Hamburger for small screens */}
@@ -59,7 +68,7 @@ const Navbar = () => {
                 <li><span onClick={handleAboutClick} className='whitetext'>about</span></li>
                 <li><span onClick={handleWorksClick} className='whitetext'>works</span></li>
                 <li><span onClick={handleResumeClick} className='whitetext'>résumè</span></li>
-                <li><RouterLink to="/#contact" className="orangetext">contact</RouterLink></li>
+                <li><span onClick={handleContactClick} className="orangetext">contact</span></li>
             </ul>
 
             {/* Mobile nav links */}
@@ -67,7 +76,7 @@ const Navbar = () => {
                 <li><span onClick={handleAboutClick} className='whitetext'>about</span></li>
                 <li><span onClick={handleWorksClick} className='whitetext'>works</span></li>
                 <li><span onClick={handleResumeClick} className='whitetext'>résumè</span></li>
-                <li><RouterLink to="/#contact" className="orangetext">contact</RouterLink></li>
+                <li><span onClick={handleContactClick} className="orangetext">contact</span></li>
             </ul>
         </nav>
     );

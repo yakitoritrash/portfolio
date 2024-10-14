@@ -32,7 +32,7 @@
     /* margin-top: 200px;
     margin-left: 110px; */
     position: relative;
-    left: 110px;
+    margin-left: 110px;
     overflow: hidden;
 }
 
@@ -52,9 +52,12 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 30px;
-    padding: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
     justify-content: center;
     max-width: 100%;
+    align-content: center;
+    margin-bottom: 20px;
 }
 
 .card{
@@ -114,7 +117,8 @@
     margin-left: 17px;
     margin-bottom: 29px;
     margin-top: 0px;
-    padding-bottom: 17px;
+    flex-wrap: wrap;
+    /* padding-bottom: 17px; */
 }
 
 /* Add subtle hover effect to the cards */
