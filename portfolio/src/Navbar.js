@@ -21,31 +21,34 @@ const Navbar = () => {
 
     const handleAboutClick = () => {
         if (location.pathname !== "/") {
-            navigate("/", { replace: true });
+            navigate("/#about", { replace: true });
             setTimeout(() => scrollToSection("about-section"), 100);
         } else {
+            navigate("#about", { replace: true });
             scrollToSection("about-section");
         }
     };
 
     const handleWorksClick = () => {
         if (location.pathname !== "/") {
-            navigate("/", { replace: true });
+            navigate("/#work", { replace: true });
             setTimeout(() => scrollToSection("works"), 100);
         } else {
+            navigate("#works", { replace: true });
             scrollToSection("works");
         }
     };
 
     const handleResumeClick = () => {
-        window.open('/assets/files/myresume.pdf', '_blank');
+        window.location.assign('/assets/files/myresume.pdf', '_blank');
     };
 
     const handleContactClick = () => {
         if (location.pathname !== "/") {
-            navigate("/", { replace: true });
+            navigate("/#contact", { replace: true });
             setTimeout(() => scrollToSection("Contact"), 100);
         } else {
+            navigate("#contact", { replace: true });
             scrollToSection("Contact");
         }
     };
