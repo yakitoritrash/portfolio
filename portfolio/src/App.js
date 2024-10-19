@@ -6,7 +6,7 @@ import Page3 from './Page3';
 import Netproject from './Netproject';
 import MalwareBlog from './MalwareBlog'; // Import your MalwareBlog component
 import Navbar from './Navbar'; // Assuming you have a Navbar component
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { HashRouter  as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import Awsvpn from './Awsvpn';
 import CloudProject from './Cloudproject';
@@ -81,11 +81,11 @@ function ConditionalRoutes() {
         </> 
       )}
 
-      <Routes>
+      {/* <Routes>
         <Route path='/about' Component={Page2} />
-        {/* <Route path="/" element={<Page3 />} />
-        <Route path='/' element= {<Page4 />} /> */}
-      </Routes>
+        <Route path="/" element={<Page3 />} />
+        <Route path='/' element= {<Page4 />} />
+      </Routes> */}
     </>
   );
 }
