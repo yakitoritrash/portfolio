@@ -12,10 +12,15 @@ const Navbar = () => {
         setMenuOpen(!menuOpen);
     };
 
+    const closeMenu = () => {
+        setMenuOpen(false); // Close the menu after clicking a link
+    };
+
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
+            closeMenu(); // Close the menu when a section is clicked
         }
     };
 
@@ -24,7 +29,6 @@ const Navbar = () => {
             navigate("/#about", { replace: true });
             setTimeout(() => scrollToSection("about-section"), 100);
         } else {
-            navigate("#about", { replace: true });
             scrollToSection("about-section");
         }
     };
@@ -34,13 +38,13 @@ const Navbar = () => {
             navigate("/#work", { replace: true });
             setTimeout(() => scrollToSection("works"), 100);
         } else {
-            navigate("#works", { replace: true });
             scrollToSection("works");
         }
     };
 
     const handleResumeClick = () => {
         window.open(`${process.env.PUBLIC_URL}/assets/files/myresume.pdf`, '_blank');
+        closeMenu(); // Close the menu after clicking resume link
     };
 
     const handleContactClick = () => {
@@ -48,7 +52,6 @@ const Navbar = () => {
             navigate("/#contact", { replace: true });
             setTimeout(() => scrollToSection("Contact"), 100);
         } else {
-            navigate("#contact", { replace: true });
             scrollToSection("Contact");
         }
     };
@@ -60,7 +63,7 @@ const Navbar = () => {
             </div>
 
             {/* Hamburger for small screens */}
-            <div className='hamburger' onClick={toggleMenu}>
+            <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -83,6 +86,6 @@ const Navbar = () => {
             </ul>
         </nav>
     );
-}
+};
 
 export default Navbar;

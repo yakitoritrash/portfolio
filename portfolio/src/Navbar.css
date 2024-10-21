@@ -18,7 +18,7 @@
 }
 
 .logo {
-    margin-left: 0; /* Remove margin for better alignment */
+    margin-left: 0;
 }
 
 .nav-links {
@@ -41,26 +41,29 @@
     color: #EDE6CF;
 }
 
-.orangetext::after, .whitetext::after {
-    content: '';
-    height: 1px;
-    width: 100%;
-    display: block;
-    opacity: 0;
-    transition: all 0.3s;
-}
+/* Underline animation for large screens */
+@media (min-width: 601px) {
+    .orangetext::after, .whitetext::after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        display: block;
+        opacity: 0;
+        transition: all 0.5s;
+    }
 
-.orangetext::after {
-    background-color: #BE5F3B;
-}
+    .orangetext::after {
+        background-color: #BE5F3B;
+    }
 
-.whitetext::after {
-    background-color: #EDE6CF;
-}
+    .whitetext::after {
+        background-color: #EDE6CF;
+    }
 
-.orangetext:hover::after,
-.whitetext:hover::after {
-    opacity: 1;
+    .orangetext:hover::after,
+    .whitetext:hover::after {
+        opacity: 1;
+    }
 }
 
 /* Hamburger Menu Styles */
@@ -71,6 +74,7 @@
     width: 25px;
     height: 20px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .hamburger div {
@@ -80,30 +84,52 @@
     transition: all 0.3s ease;
 }
 
-/* Hide the nav-links by default on small screens */
+.hamburger.open div:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile nav menu with shutter animation */
 .nav-links-mobile {
-    display: none;
+    display: flex;
     flex-direction: column;
     background-color: #333;
     position: absolute;
-    top: 60px;
+    top: 30px;
     right: 0;
     width: 100%;
-    padding: 20px 0;
-    height:max-content;
+    height: 0; /* Initial height for shutter effect */
+    overflow: hidden;
+    transition: height 0.5s ease-in-out; /* Shutter-like transition */
+    padding: 0; /* Padding will be added after expanding */
+    justify-content: center;
+    gap: 20px;
 }
 
 .nav-links-mobile a {
-    /* padding: 15px; */
     text-align: center;
     color: #BE5F3B;
     text-decoration: none;
+    padding: 20px 0;
+}
+
+/* Shutter animation when active */
+.nav-links-mobile.active {
+    height: 200px; /* Height for full menu display */
+    padding: 20px 0; /* Add padding when menu is active */
 }
 
 /* Media Query for Small Screens */
 @media (max-width: 600px) {
     .navbar {
-        padding: 10px 20px; /* Reduce padding for smaller screens */
+        padding: 10px 20px;
     }
 
     .nav-links {
@@ -111,15 +137,17 @@
     }
 
     .logo {
-        margin-left: 10px; /* Reduce margin for better alignment */
+        margin-left: 10px;
     }
 
     .hamburger {
         display: flex;
-        margin-right: 10px; /* Align hamburger to the right */
+        margin-right: 10px;
     }
 
-    .nav-links-mobile.active {
-        display: flex;
+    /* Disable underline animation on small screens */
+    .orangetext::after,
+    .whitetext::after {
+        display: none;
     }
 }

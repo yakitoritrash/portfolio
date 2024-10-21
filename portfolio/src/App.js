@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Hero from './Hero';
 import Page2 from './Page2';
 import Page3 from './Page3';
@@ -16,7 +16,8 @@ import Everydayphotoshop from './Everydayphotoshop';
 import Uptimekumablog from './Uptimekumablog';
 import Page4 from './Page4';
 import Blobcursor from './Blobcursor';
-
+import Activedirectoryblog from './Activedirectoryblog';
+import Loading from './Loading';
 
 const ScrollToHashElement = () => {
   const { hash } = useLocation();
@@ -35,9 +36,25 @@ const ScrollToHashElement = () => {
 
 
 function App() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoading = () => {
+      setLoading(false);
+    };
+
+    window.addEventListener('load', handleLoading);
+
+    return () => {
+      window.removeEventListener('load', handleLoading);
+    };
+  }, []);
+
   return (
     <Router>
       <div className="App">
+        {loading && <Loading />}
       <Blobcursor />
         <Navbar />
 
@@ -51,7 +68,7 @@ function App() {
           <Route path="/design" element={<Designproject />} />
           <Route path="/blog/malware-analysis-lab" element={<MalwareBlog />} />
           <Route path="/blog/aws-openvpn" element={<Awsvpn />} />
-          <Route path="/blog/active-directory" element={<Awsvpn />} />
+          <Route path="/blog/active-directory" element={<Activedirectoryblog />} />
           <Route path="/blog/ntfy-setup" element={<NtfyBlog />} />
           <Route path="/blog/everyday-photoshop" element={<Everydayphotoshop />} />
           <Route path="/blog/uptime-kuma-setup" element= {<Uptimekumablog />} />
