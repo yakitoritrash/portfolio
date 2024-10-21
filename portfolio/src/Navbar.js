@@ -72,7 +72,7 @@ const Navbar = () => {
             {/* Default nav links */}
             <ul className='nav-links'>
                 <li><a onClick={handleAboutClick} className='whitetext'>about</a></li>
-                <li><a onClick={handleWorksClick} className='whitetext'>works</a></li>
+                <li><a onClick={handleWorksClick} className='whitetext'>work</a></li>
                 <li><a onClick={handleResumeClick} className='whitetext'>résumè</a></li>
                 <li><a onClick={handleContactClick} className="orangetext">contact</a></li>
             </ul>
@@ -80,7 +80,7 @@ const Navbar = () => {
             {/* Mobile nav links */}
             <ul className={`nav-links-mobile ${menuOpen ? 'active' : ''}`}>
                 <li><span onClick={handleAboutClick} className='whitetext'>about</span></li>
-                <li><span onClick={handleWorksClick} className='whitetext'>works</span></li>
+                <li><span onClick={handleWorksClick} className='whitetext'>work</span></li>
                 <li><span onClick={handleResumeClick} className='whitetext'>résumè</span></li>
                 <li><span onClick={handleContactClick} className="orangetext">contact</span></li>
             </ul>

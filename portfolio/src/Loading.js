@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Loading.css';
 
-const Loading = () => {
+const Loading = ({ onComplete }) => {
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
@@ -9,6 +9,9 @@ const Loading = () => {
             setProgress((prevProgress) => {
                 if (prevProgress >= 100) {
                     clearInterval(interval);
+                    if (onComplete) {
+                        onComplete();
+                    }
                     return 100;
                 }
                 return prevProgress + 1;
@@ -16,7 +19,7 @@ const Loading = () => {
         }, 30); // Adjust the interval time as needed
 
         return () => clearInterval(interval);
-    }, []);
+    }, [onComplete]);
 
     return (
         <div className="loading-screen">

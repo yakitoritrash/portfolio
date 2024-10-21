@@ -44,12 +44,13 @@
     font-size: 95.91px;
     font-weight: bold;
     margin: 0;
-    /* width: 558px; */
+    width: 500px;
     height: 105px;
-
+    text-align: center;
     left: 594px;
     color: #CCC5B9;
     text-align: left;
+    white-space: nowrap;
 }
 
 .about-description{
@@ -137,6 +138,7 @@
         height: 100%;
         text-align: center;
         margin: auto;
+        width: 100%;
     }
 
     .aboutme .resumephoto{

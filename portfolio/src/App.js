@@ -51,10 +51,14 @@ function App() {
     };
   }, []);
 
+  const handleLoadingComplete = () => {
+    setLoading(false);
+};
+
   return (
     <Router>
       <div className="App">
-        {loading && <Loading />}
+        {loading && <Loading onComplete={handleLoadingComplete} />}
       <Blobcursor />
         <Navbar />
 
