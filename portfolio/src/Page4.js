@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com';
 import './Page4.css';
 import Footer from "./Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FaInstagram } from "react-icons/fa";
 
 const Page4 = () => {
@@ -75,19 +75,13 @@ const Page4 = () => {
                         <div className="down">
                             <h2 className="SubHeading">Socials:</h2>
                                 <div className="social-icons">
-                                    <a href = "https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                    <a href = "https://instagram.com/yakitoritrash2" target="_blank" rel="noopener noreferrer">
                                         <FaInstagram className="icon" />
                                     </a>
-                                    {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={faFacebook} className="icon" />
-                                    </a> */}
-                                    {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={faTwitter} className="icon" />
-                                    </a> */}
-                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://www.linkedin.com/in/kushagra-dwivedi-672371205?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8IjoSGAoTRCzgucICZC%2B1w%3D%3D" target="_blank" rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={faLinkedin} className="icon" />
                                     </a>
-                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://github.com/yakitoritrash" target="_blank" rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={faGithub} className="icon" />
                                     </a>
                                 </div>

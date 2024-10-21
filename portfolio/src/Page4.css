@@ -59,7 +59,7 @@
     font-size: 95.91px;
     font-weight: bold;
     margin: 0;
-    /* width: 558px; */
+    width: 900px;
     /* height: 100%; */
     /* top: 1970px;
     left: 110px; */
@@ -181,6 +181,7 @@ textarea {
     .Heading{
         font-size: 50px;
         height: auto;
+        width: 100%;
     }
 
     .subtitle{

@@ -35,3 +35,7 @@
         transform: translateY(-100%);
     }
 } */
+
+.loading-screen.fade-out {
+    opacity: 0;
+}

@@ -3,15 +3,19 @@ import './Loading.css';
 
 const Loading = ({ onComplete }) => {
     const [progress, setProgress] = useState(0);
+    const [fadeOut, setFadeOut] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setProgress((prevProgress) => {
                 if (prevProgress >= 100) {
                     clearInterval(interval);
-                    if (onComplete) {
-                        onComplete();
-                    }
+                    setFadeOut(true);
+                    setTimeout(() => {
+                        if (onComplete) {
+                            onComplete();
+                        }
+                    }, 500); // Match this duration with the CSS transition duration
                     return 100;
                 }
                 return prevProgress + 1;
@@ -22,7 +26,7 @@ const Loading = ({ onComplete }) => {
     }, [onComplete]);
 
     return (
-        <div className="loading-screen">
+        <div className={`loading-screen ${fadeOut ? 'fade-out' : ''}`}>
             <div className="loading-text">{progress}%</div>
         </div>
     );
