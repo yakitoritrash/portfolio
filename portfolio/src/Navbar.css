@@ -30,6 +30,7 @@
 
 .nav-links a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .orangetext {

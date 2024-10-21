@@ -88,6 +88,7 @@
     font-family: "General Sans Bold";
     font-size: 50px;
     color: #BE5F3B;
+    margin-bottom: auto;
 }
 
 .contact-form {
@@ -132,7 +133,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     color: #BE5F3B; /* Change color to orange when active */
     font-size: 16px; /* Make it smaller when active */
     font-family: 'Uncut Sans Book';
-    transition-duration: 5000ms;
+    transition-duration: 500ms;
 }
 
 /* Textarea specific styling */
@@ -289,4 +290,21 @@ textarea {
         margin-top: 40px;
     }
 
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 40px;
+    color: #CCC5B9; /* Default color */
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #BE5F3B; /* Change to your desired hover color */
 }

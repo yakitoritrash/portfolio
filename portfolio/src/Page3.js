@@ -3,6 +3,45 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate
 import './Page3.css';
 
 const Page3 = () => {
+    useEffect(() => {
+
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const handleMouseOver = (event) => {
+            let iterations = 0;
+
+            const interval = setInterval(() => {
+                event.target.innerText = event.target.innerText.split("")
+                .map((letter, index) => {
+                    if(index < iterations) {
+                        return event.target.dataset.value[index];
+                    }
+                    return letters[Math.floor(Math.random() * 26)]
+                }) 
+                
+                .join(""); 
+
+
+                if (iterations >= 9) clearInterval(interval);
+                    
+                    
+                iterations += 1 / 3;    
+            }, 30);
+
+        };
+
+        const heading = document.querySelector(".works-title");
+        if (heading) {
+            heading.onmouseover = handleMouseOver;
+        }
+
+        return () => {
+            if (heading) {
+                heading.onmouseover = null;
+            }
+        };
+
+    }, []);
+
     const cardRefs = useRef([]);
     const navigate = useNavigate();  // Initialize useNavigate
 
@@ -59,7 +98,7 @@ const Page3 = () => {
 
     return (
         <section className="page3" id = "works">
-            <h1 className="works-title">MY WORKS.</h1>
+            <h1 className="works-title" data-value="MY WORK.">MY WORK.</h1>
             <div className="tiles">
                 {cardsData.map((card, index) => (
                     <div

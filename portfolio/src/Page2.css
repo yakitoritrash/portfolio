@@ -55,11 +55,12 @@
 .about-description{
     font-family: "Uncut Sans Book";
     font-size: 23.99px;
-    /* margin-top: 20px;
-    margin-bottom: 0px; */
+    /* margin-top: 20px; */
+
     width: 583px;
-    height: 145px;
+    height: auto;
     /* top: 1077px; */
+    margin-bottom: 10px;
     left: 594px;
     color: #EDE6CF;
     text-align: left;

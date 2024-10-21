@@ -15,6 +15,7 @@ import Designproject from './Designproject';
 import Everydayphotoshop from './Everydayphotoshop';
 import Uptimekumablog from './Uptimekumablog';
 import Page4 from './Page4';
+import Blobcursor from './Blobcursor';
 
 
 const ScrollToHashElement = () => {
@@ -37,7 +38,9 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <Blobcursor />
         <Navbar />
+
         <div className='Main_Page'>
           <ScrollToHashElement />
           <ConditionalRoutes />

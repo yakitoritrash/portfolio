@@ -19,40 +19,44 @@ const Navbar = () => {
         }
     };
 
-    const handleNavigation = (hash, sectionId) => {
-        const currentHash = location.hash;
-
-        // Update hash only if it's different and ensure it's correctly formatted
-        if (currentHash !== hash) {
-            navigate(`${location.pathname}${hash}`, { replace: true });
-        }
-        
-        // Scroll to the section after navigation
-        setTimeout(() => scrollToSection(sectionId), 100);
-    };
-
     const handleAboutClick = () => {
-        handleNavigation('#about', 'about-section');
+        if (location.pathname !== "/") {
+            navigate("/#about", { replace: true });
+            setTimeout(() => scrollToSection("about-section"), 100);
+        } else {
+            navigate("#about", { replace: true });
+            scrollToSection("about-section");
+        }
     };
 
     const handleWorksClick = () => {
-        handleNavigation('#works', 'works');
+        if (location.pathname !== "/") {
+            navigate("/#work", { replace: true });
+            setTimeout(() => scrollToSection("works"), 100);
+        } else {
+            navigate("#works", { replace: true });
+            scrollToSection("works");
+        }
     };
 
     const handleResumeClick = () => {
-        window.location.assign('/assets/files/myresume.pdf', '_blank');
+        window.open(`${process.env.PUBLIC_URL}/assets/files/myresume.pdf`, '_blank');
     };
 
     const handleContactClick = () => {
-        handleNavigation('#contact', 'Contact');
+        if (location.pathname !== "/") {
+            navigate("/#contact", { replace: true });
+            setTimeout(() => scrollToSection("Contact"), 100);
+        } else {
+            navigate("#contact", { replace: true });
+            scrollToSection("Contact");
+        }
     };
 
     return (
         <nav className='navbar'>
             <div className='logo'>
-                <RouterLink to="https://kushagradwivedi.tech">
-                    <img src={logo} alt="Logo" className='logo.png' />
-                </RouterLink>
+                <RouterLink to="https://kushagradwivedi.tech"><img src={logo} alt="Logo" className='logo.png' /></RouterLink>
             </div>
 
             {/* Hamburger for small screens */}
@@ -64,10 +68,10 @@ const Navbar = () => {
 
             {/* Default nav links */}
             <ul className='nav-links'>
-                <li><span onClick={handleAboutClick} className='whitetext'>about</span></li>
-                <li><span onClick={handleWorksClick} className='whitetext'>works</span></li>
-                <li><span onClick={handleResumeClick} className='whitetext'>résumè</span></li>
-                <li><span onClick={handleContactClick} className="orangetext">contact</span></li>
+                <li><a onClick={handleAboutClick} className='whitetext'>about</a></li>
+                <li><a onClick={handleWorksClick} className='whitetext'>works</a></li>
+                <li><a onClick={handleResumeClick} className='whitetext'>résumè</a></li>
+                <li><a onClick={handleContactClick} className="orangetext">contact</a></li>
             </ul>
 
             {/* Mobile nav links */}

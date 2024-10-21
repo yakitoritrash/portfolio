@@ -43,7 +43,15 @@
     font-weight: bold;
     margin: 0;
     width: 600px;
-    height: 242px;
+    color: #CCC5B9;
+}
+
+.HEROTITLETITLE{
+    font-family: "General Sans Bold";
+    font-size: 95.91px;
+    font-weight: bold;
+    margin: 0;
+    width: 600px;
     color: #CCC5B9;
 }
 
@@ -83,6 +91,15 @@
         align-items:flex-start;
         width: 100%;
     }
+    
+    .HEROTITLETITLE{
+        font-size: 50px; /* Further reduce font size */
+        /* align-items:flex-start; */
+        text-align: left;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    }
 }
 
 
@@ -97,6 +114,14 @@
     }
 
     .hero-title {
+        font-size: 50px; /* Further reduce font size */
+        /* align-items:flex-start; */
+        text-align: left;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    }
+    .HEROTITLETITLE{
         font-size: 50px; /* Further reduce font size */
         /* align-items:flex-start; */
         text-align: left;

@@ -51,8 +51,16 @@
     {  
         font-size: 20px;
         text-align: center;
-        margin-right: 0;
+        /* margin-right: 0;
+        margin-top: 0; */
+        margin-top: 18px;
+        margin-bottom: 10px;
+    }
+    .footer{
+        align-items: center;
+        margin-bottom: 0;
         margin-top: 0;
+        margin-right: 0;
     }
 } 
 
