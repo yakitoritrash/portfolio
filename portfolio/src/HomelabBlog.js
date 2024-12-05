@@ -2,7 +2,7 @@ import './MalwareBlog.css';
 import React from 'react';
 
 // Create a context for the images
-const images = require.context('./assets/images/malwareblog', false, /\.(png|jpe?g|svg)$/);
+const images = require.context('./assets/images/homelab', false, /\.(png|jpe?g|svg)$/);
 
 // Function to get the image by name
 const getImage = (imageName) => {
@@ -12,52 +12,51 @@ const getImage = (imageName) => {
 const HomeLabBlog = () => {
     return (
         <div className="blog-container">
-            <h1>Malware Analysis Lab with Isolated Virtual Network Setup.</h1>
+            <h1>Setting Up a HomeLab with Ubuntu Server and Cloudflare Zero Trust.</h1>
             <h2>Summary</h2>
             <p>
-                In this project, I created a secure malware analysis environment by setting up two virtual machines (VMs): a Windows 10 VM that I converted into FLARE VM and a REMnux VM. The two VMs were isolated from external networks, only allowing communication between them via a custom virtual network configuration. The REMnux VM was configured as the DNS server for the FLARE VM. This setup enabled safe and controlled malware analysis by ensuring that the malware within the FLARE VM couldn't communicate with anything beyond the isolated virtual network.
+                In this project, I repurposed an old laptop to create a HomeLab running Ubuntu Server with multiple services like Samba network storage, Jellyfin, Uptime Kuma, and Vaultwarden. Using Cloudflare Zero Trust, I integrated these services with my personal domain for secure remote access.
             </p>
             <h2>Project Details</h2>
             <p>
-                The primary goal of this project was to create a controlled environment for analyzing malware without risking the security of the external network. By isolating the VMs, I ensured that any malicious activity would be contained within the virtual network.
+                The primary goal of this project was to create a versatile and accessible HomeLab environment that could be accessed remotely and securely. By leveraging Cloudflare Zero Trust, I ensured that the services running on the HomeLab could be accessed from anywhere, even when not on the local network.
             </p>
             <h2>Steps Involved</h2>
             <ul>
-                <li className='list'>Set up a Windows 10 VM and converted it into a FLARE VM.
+                <li className='list'>Set up Ubuntu Server on an old laptop.
                 </li>
                 <div className='images'>
-                    <img className='img' src={getImage('1.png')} alt='antivirus-off' />
-                    <img className='img' src={getImage('2.png')} alt='antivirus-disable' />
-                    <img className='img' src={getImage('3.png')} alt='firewall-off' />
-                    <img className='img' src={getImage('4.png')} alt='windefender' />
-                    <img className='img' src={getImage('5.png')} alt='script' />
-                    <img className='img' src={getImage('6.png')} alt='process' />
-                    <img className='img' src={getImage('13.png')} alt='flare-vm' />
+                    <img className='img' src={getImage('ubuntu-server.png')} alt='ubuntu-server' />
                 </div>
-                <li>Set up a REMnux VM for malware analysis tools.</li>
+                <li>Installed and configured Samba for network storage.
+                </li>
                 <div className='images'>
-                   <img className='img' src={getImage('7.png')} alt='remnux' />
+                    <img className='img' src={getImage('samba.png')} alt='samba' />
                 </div>
-
-                <li>Configured a custom virtual network to isolate the VMs from external networks.</li>
+                <li>Set up Jellyfin for media streaming.
+                </li>
                 <div className='images'>
-                   <img className='img' src={getImage('8.png')} alt='adapter' />
-                   <img className='img' src={getImage('9.png')} alt='DHCP' />
+                    <img className='img' src={getImage('jellyfin.png')} alt='jellyfin' />
                 </div>
-                <li>Configured the REMnux VM as the DNS server for the FLARE VM.</li>
+                <li>Deployed Uptime Kuma for monitoring service uptime.
+                </li>
                 <div className='images'>
-                    <img className='img' src={getImage('10.png')} alt='antivirus-off' />
-                    <img className='img' src={getImage('11.png')} alt='antivirus-disable' />
-                    <img className='img' src={getImage('12.png')} alt='firewall-off' />
-                    <img className='img' src={getImage('14.png')} alt='windefender' />
-                    <img className='img' src={getImage('15.png')} alt='script' />
-                    <img className='img' src={getImage('16.png')} alt='process' />
+                    <img className='img' src={getImage('uptime-kuma.png')} alt='uptime-kuma' />
                 </div>
-                <li>Tested the setup to ensure that the FLARE VM could only communicate with the REMnux VM.</li>
+                <li>Configured Vaultwarden for secure password management.
+                </li>
+                <div className='images'>
+                    <img className='img' src={getImage('vaultwarden.png')} alt='vaultwarden' />
+                </div>
+                <li>Integrated all services with Cloudflare Zero Trust for secure remote access.
+                </li>
+                <div className='images'>
+                    <img className='img' src={getImage('cloudflare-zero-trust.png')} alt='cloudflare-zero-trust' />
+                </div>
             </ul>
             <h2>Conclusion</h2>
             <p>
-                This setup provides a safe and controlled environment for malware analysis, allowing for in-depth examination of malicious software without the risk of it spreading to other systems. The isolated virtual network ensures that any communication attempts by the malware are contained within the lab environment.
+                This HomeLab setup provides a robust and secure environment for running various services, accessible from anywhere via Cloudflare Zero Trust. It demonstrates the versatility of using an old laptop to create a powerful and accessible HomeLab.
             </p>
         </div>
     );
