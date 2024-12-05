@@ -18,6 +18,7 @@ import Page4 from './Page4';
 import Blobcursor from './Blobcursor';
 import Activedirectoryblog from './Activedirectoryblog';
 import Loading from './Loading';
+import HomeLabBlog from './HomelabBlog';
 
 const ScrollToHashElement = () => {
   const { hash } = useLocation();
@@ -76,6 +77,7 @@ function App() {
           <Route path="/blog/ntfy-setup" element={<NtfyBlog />} />
           <Route path="/blog/everyday-photoshop" element={<Everydayphotoshop />} />
           <Route path="/blog/uptime-kuma-setup" element= {<Uptimekumablog />} />
+          <Route path="/blog/home-lab" element= {<HomeLabBlog />} />
         </Routes>
       </div>
     </Router>
