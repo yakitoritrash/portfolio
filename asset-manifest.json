@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0d80130f.css",
-    "main.js": "/static/js/main.88bf3cd2.js",
+    "main.js": "/static/js/main.bb5da156.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/11.jpg": "/static/media/11.f23fd67fa58afb3d25a8.jpg",
     "static/media/9.jpg": "/static/media/9.5c5e109561cae889ee3e.jpg",
@@ -28,23 +28,25 @@
     "static/media/10.png": "/static/media/10.809a9cf0bec1b9bf076a.png",
     "static/media/12.png": "/static/media/12.c0aaa6054811712dce8a.png",
     "static/media/8.jpg": "/static/media/8.6f6fcbbf0fa629c2c3e8.jpg",
+    "static/media/ubuntu-server.png": "/static/media/ubuntu-server.d481ff9abb4bbea455e6.png",
     "static/media/7.jpg": "/static/media/7.37ac3be8f0a5b28c9c2c.jpg",
     "static/media/9.png": "/static/media/9.5db555d8e441d6110a73.png",
     "static/media/3.jpg": "/static/media/3.19fe6fc8af4de801ee34.jpg",
     "static/media/7.png": "/static/media/7.eb2ba9ac9fed0bf56aa0.png",
     "static/media/4.jpg": "/static/media/4.b7ee3f679641d0f97d02.jpg",
     "static/media/14.png": "/static/media/14.4484a697a216771c309b.png",
+    "static/media/cloudflare-zero-trust.png": "/static/media/cloudflare-zero-trust.8fde1419922f5fc9ef83.png",
     "static/media/UncutSans-Bold.otf": "/static/media/UncutSans-Bold.68fa1f4611006f1d1796.otf",
     "static/media/UncutSans-Semibold.otf": "/static/media/UncutSans-Semibold.074e821a2956c228a669.otf",
     "static/media/UncutSans-Book.otf": "/static/media/UncutSans-Book.32b04c2ac5324215ddbc.otf",
     "static/media/GeneralSans-Bold.otf": "/static/media/GeneralSans-Bold.7d113a8107451af3d10f.otf",
     "index.html": "/index.html",
     "main.0d80130f.css.map": "/static/css/main.0d80130f.css.map",
-    "main.88bf3cd2.js.map": "/static/js/main.88bf3cd2.js.map",
+    "main.bb5da156.js.map": "/static/js/main.bb5da156.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0d80130f.css",
-    "static/js/main.88bf3cd2.js"
+    "static/js/main.bb5da156.js"
   ]
 }
