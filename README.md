@@ -14,7 +14,6 @@ Welcome to my personal portfolio! This site is built with [React](https://reactj
 - React
 - JavaScript (ES6+)
 - HTML5 & CSS3
-- [Add any additional libraries or frameworks here]
 
 ## Getting Started
 
@@ -27,7 +26,7 @@ npm install
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [https://kushagradwivedi.tech]([https://kushagradwivedi.tech]) to view it in your browser.
 
 ## Deployment
 
