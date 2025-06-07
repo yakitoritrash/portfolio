@@ -1,4 +1,4 @@
-# yakitoritrash Portfolio
+# yakitoritrash portfolio
 
 Welcome to my personal portfolio! This site is built with [React](https://reactjs.org/) (bootstrapped with [Create React App](https://create-react-app.dev/)) and showcases my work, skills, and projects.
 
