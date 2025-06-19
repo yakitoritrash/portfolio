@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.8bb3d3b8.css",
+    "main.css": "/static/css/main.aaabb89e.css",
     "main.js": "/static/js/main.3598fdd8.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/11.jpg": "/static/media/11.f23fd67fa58afb3d25a8.jpg",
@@ -39,12 +39,12 @@
     "static/media/UncutSans-Book.otf": "/static/media/UncutSans-Book.32b04c2ac5324215ddbc.otf",
     "static/media/GeneralSans-Bold.otf": "/static/media/GeneralSans-Bold.7d113a8107451af3d10f.otf",
     "index.html": "/index.html",
-    "main.8bb3d3b8.css.map": "/static/css/main.8bb3d3b8.css.map",
+    "main.aaabb89e.css.map": "/static/css/main.aaabb89e.css.map",
     "main.3598fdd8.js.map": "/static/js/main.3598fdd8.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8bb3d3b8.css",
+    "static/css/main.aaabb89e.css",
     "static/js/main.3598fdd8.js"
   ]
 }
