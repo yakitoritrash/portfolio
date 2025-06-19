@@ -127,8 +127,8 @@
 }
 
 .card:hover {
-    transform: scale(1.005); /* Scale up the card slightly */
-    /* box-shadow: 0 8px 10px rgba(255, 255, 255, 0.2); Adds a shadow effect */
+    /*transform: scale(1.005); /* Scale up the card slightly */
+    box-shadow: 0 8px 10px rgba(255, 255, 255, 0.2); 
 }
 
 .go-to-link-icon {

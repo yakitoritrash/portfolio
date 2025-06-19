@@ -46,7 +46,7 @@ const Hero = () => {
         <section className="hero">
             <h1 className="HEROTITLETITLE">HEY, I AM</h1>
             <h1 className="hero-title" data-value = "KUSHAGRA.">KUSHAGRA.</h1> 
-            <p className="hero-description">A software engineer and IT specialist. I am currently open to work.</p>
+            <p className="hero-description">A software engineer and IT specialist. I like what I do. I am currently open to work. :O</p>
         </section>
     );
 };

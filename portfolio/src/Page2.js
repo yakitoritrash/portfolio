@@ -75,7 +75,11 @@ const Page2 = () => {
             </div>
             <div className="aboutme">
             <h1 className="photo-title" data-value= "ABOUT ME.">ABOUT ME.</h1>
-            <p className="about-description">A passionate and dedicated IT Specialist and front-end developer currently pursuing an integrated master's degree in Cybersecurity at VIT Bhopal, India. My journey in the tech world has been fueled by a deep interest in cybersecurity, design, and development, and I am always eager to explore new opportunities and collaborations.</p>
+            <p className="about-description">I'm a software engineer with a strong interest in cybersecurity, currently pursuing an integrated Master’s degree in Cybersecurity at VIT Bhopal (final year).
+
+My background blends secure systems, software development, and problem-solving — whether it’s writing efficient backend code, working with networks, or understanding how systems behave under the hood. I enjoy building reliable software and thinking critically about security, performance, and design.
+
+Cybersecurity is a core part of how I approach technology. I'm particularly interested in areas like system security, intrusion detection, and creating tools that are both effective and dependable.</p>
                 <div className="callme">
                     <p className="whiteme">Want to work together?</p>
                     <a href="contact" className="orangeme" onClick={handleContactClick}>Drop me a line.</a>
