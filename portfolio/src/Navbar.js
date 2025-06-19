@@ -59,7 +59,7 @@ const Navbar = () => {
     return (
         <nav className='navbar'>
             <div className='logo'>
-                <RouterLink to="https://kushagradwivedi.tech"><img src={logo} alt="Logo" className='logo.png' /></RouterLink>
+                <RouterLink to="https://kushagradwivedi.space"><img src={logo} alt="Logo" className='logo.png' /></RouterLink>
             </div>
 
             {/* Hamburger for small screens */}
