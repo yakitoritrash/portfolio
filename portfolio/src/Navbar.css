@@ -28,9 +28,14 @@
     gap: 71px;
 }
 
-.nav-links a {
-    text-decoration: none;
+.nav-button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
     cursor: pointer;
+    text-decoration: none;
+    margin: 0;
 }
 
 .orangetext {
@@ -43,26 +48,25 @@
 
 /* Underline animation for large screens */
 @media (min-width: 601px) {
-    .orangetext::after, .whitetext::after {
+    .nav-button::after {
         content: '';
+        display: block;
         height: 1px;
         width: 100%;
-        display: block;
         opacity: 0;
         transition: all 0.5s;
     }
 
-    .orangetext::after {
+    .whitetext.nav-button::after {
+        background-color: rgba(237, 230, 207, 1);
+    }
+
+    .orangetext.nav-button::after {
         background-color: #BE5F3B;
     }
 
-    .whitetext::after {
-        background-color: #EDE6CF;
-    }
-
-    .orangetext:hover::after,
-    .whitetext:hover::after {
-        opacity: 1;
+    .nav-button:hover::after {
+        opacity: 2;
     }
 }
 
@@ -107,23 +111,24 @@
     width: 100%;
     height: 0; /* Initial height for shutter effect */
     overflow: hidden;
-    transition: height 0.5s ease-in-out; /* Shutter-like transition */
-    padding: 0; /* Padding will be added after expanding */
+    transition: height 0.5s ease-in-out;
+    padding: 0;
     justify-content: center;
     gap: 20px;
 }
 
-.nav-links-mobile a {
+.nav-links-mobile span {
     text-align: center;
     color: #BE5F3B;
     text-decoration: none;
     padding: 20px 0;
+    cursor: pointer;
 }
 
 /* Shutter animation when active */
 .nav-links-mobile.active {
-    height: 200px; /* Height for full menu display */
-    padding: 20px 0; /* Add padding when menu is active */
+    height: 200px;
+    padding: 20px 0;
 }
 
 /* Media Query for Small Screens */
@@ -146,8 +151,8 @@
     }
 
     /* Disable underline animation on small screens */
-    .orangetext::after,
-    .whitetext::after {
+    .nav-button::after {
         display: none;
     }
 }
+

@@ -71,10 +71,10 @@ const Navbar = () => {
 
             {/* Default nav links */}
             <ul className='nav-links'>
-                <li><a onClick={handleAboutClick} className='whitetext'>about</a></li>
-                <li><a onClick={handleWorksClick} className='whitetext'>work</a></li>
-                <li><a onClick={handleResumeClick} className='whitetext'>résumè</a></li>
-                <li><a onClick={handleContactClick} className="orangetext">contact</a></li>
+                <li><button onClick={handleAboutClick} className='whitetext nav-button'>about</button></li>
+                <li><button onClick={handleWorksClick} className='whitetext nav-button'>work</button></li>
+                <li><button onClick={handleResumeClick} className='whitetext nav-button'>résumè</button></li>
+                <li><button onClick={handleContactClick} className="orangetext nav-button">contact</button></li>
             </ul>
 
             {/* Mobile nav links */}
