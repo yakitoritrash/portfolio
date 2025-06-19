@@ -2,12 +2,12 @@ import './MalwareBlog.css';
 import React from 'react';
 
 // Create a context for the images
-const images = require.context('./assets/images/malwareblog', false, /\.(png|jpe?g|svg)$/);
-
-// Function to get the image by name
-const getImage = (imageName) => {
-    return images(`./${imageName}`);
-};
+//  const images = require.context('./assets/images/malwareblog', false, /\.(png|jpe?g|svg)$/);
+//
+//  // Function to get the image by name
+//  const getImage = (imageName) => {
+//      return images(`./${imageName}`);
+//  };
 
 const Activedirectoryblog = () => {
     return (
