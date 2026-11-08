@@ -41,11 +41,22 @@ const Page2 = () => {
         if (heading) {
             heading.onmouseover = handleMouseOver;
         }
+        let observer;
+        if (heading && window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+            observer = new IntersectionObserver(([entry]) => {
+                if (entry.isIntersecting) {
+                    handleMouseOver({ target: heading });
+                    observer.disconnect();
+                }
+            }, { threshold: 0.65 });
+            observer.observe(heading);
+        }
 
         return () => {
             if (heading) {
                 heading.onmouseover = null;
             }
+            if (observer) observer.disconnect();
         };
 
     }, []);
