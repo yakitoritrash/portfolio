@@ -89,6 +89,12 @@ body::selection { background: var(--accent); color: var(--ink); }
 }
 .aboutme { max-width: 620px; }
 .photo-title, .works-title, .Heading { font-size: clamp(36px, 5vw, 62px); height: auto; width: auto; }
+.photo-title, .works-title, .Heading {
+  margin: 0 0 22px;
+  color: var(--text) !important;
+  font: 700 clamp(36px, 5vw, 62px)/1.05 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+  letter-spacing: -.065em;
+}
 .about-description { width: auto; white-space: pre-line; }
 .callme { justify-content: flex-start; flex-wrap: wrap; }
 .whiteme, .orangeme { font: 15px ui-monospace, SFMono-Regular, Menlo, monospace; }
@@ -409,7 +415,7 @@ body:has(.blog-container) .navbar { position: sticky; }
   .photo-title { width: 100%; margin: 0; text-align: center; }
   .about-description { text-align: left; }
   .page3 { width: 100%; box-sizing: border-box; padding: 0 20px; }
-  .page3 .works-title { width: 100%; font-size: clamp(34px, 12vw, 56px); text-align: center; }
+  .page3 .works-title { width: 100%; text-align: center; }
   .page3 .tiles { width: 100%; padding: 24px 0; }
   .page3 .card { width: 100%; height: auto; min-height: 190px; }
   .Contact_Page { width: 100%; box-sizing: border-box; padding: 30px 20px; margin: 0; gap: 10px; }
@@ -418,7 +424,7 @@ body:has(.blog-container) .navbar { position: sticky; }
   .Heading { width: 100%; text-align: center; }
   .TopLeft .subtitle { width: 100%; }
   .social-icons { flex-wrap: wrap; }
-  .Heading { font-size: clamp(34px, 10vw, 54px); }
+  .photo-title, .works-title, .Heading { font-size: clamp(34px, 10vw, 54px) !important; }
   .footertext { font-size: 12px; }
   .network { width: calc(100% - 40px); margin: 50px auto 22px; }
   .network-title { width: 100%; font-size: clamp(32px, 10vw, 54px); }
