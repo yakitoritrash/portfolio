@@ -13,6 +13,7 @@ const Uptimekumablog = () => {
     return (
         <div className="blog-container">
             <h1>Setting Up Uptime Kuma on Linode.</h1>
+            <h2>Languages and stack</h2><p className="stack-line"><span className="stack-linux">Linux</span><span className="stack-cloudflare">Linode</span><span className="stack-api">Uptime Kuma</span><span className="stack-api">Discord</span></p>
             <h2>Summary</h2>
             <p>
             In this project, I set up an Uptime Kuma server on a Linode instance to monitor the uptime and performance of several websites. Additionally, I configured the server to send notifications to a Discord channel, ensuring that I receive real-time alerts about any downtime or performance issues. This setup helps in maintaining the reliability and availability of the monitored websites.

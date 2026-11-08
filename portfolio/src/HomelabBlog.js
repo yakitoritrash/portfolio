@@ -13,6 +13,7 @@ const HomeLabBlog = () => {
     return (
         <div className="blog-container">
             <h1>Setting Up a HomeLab with Ubuntu Server and Cloudflare Zero Trust.</h1>
+            <h2>Languages and stack</h2><p className="stack-line"><span className="stack-ubuntu">Ubuntu Server</span><span className="stack-samba">Samba</span><span className="stack-jellyfin">Jellyfin</span><span className="stack-vaultwarden">Vaultwarden</span><span className="stack-cloudflare">Cloudflare Zero Trust</span></p>
             <h2>Summary</h2>
             <p>
                 In this project, I repurposed an old laptop to create a HomeLab running Ubuntu Server with multiple services like Samba network storage, Jellyfin, Uptime Kuma, and Vaultwarden. Using Cloudflare Zero Trust, I integrated these services with my personal domain for secure remote access.

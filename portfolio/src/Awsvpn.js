@@ -13,6 +13,7 @@ const Awsvpn = () => {
     return (
         <div className="blog-container">
             <h1>Setting Up a Secure OpenVPN Server on AWS.</h1>
+            <h2>Languages and stack</h2><p className="stack-line"><span className="stack-aws">AWS</span><span className="stack-ec2">EC2</span><span className="stack-openvpn">OpenVPN</span><span className="stack-linux">Linux</span></p>
             <h2>Summary</h2>
             <p>
             The primary goal of this project was to establish a secure and encrypted communication channel for remote access to internal network resources. By leveraging AWS and OpenVPN, I was able to create a robust VPN solution that ensures data privacy and security.

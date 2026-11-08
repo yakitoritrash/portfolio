@@ -19,6 +19,11 @@ import Blobcursor from './Blobcursor';
 import Activedirectoryblog from './Activedirectoryblog';
 import Loading from './Loading';
 import HomeLabBlog from './HomelabBlog';
+import SpotifyvimBlog from './SpotifyvimBlog';
+import Aiproject from './Aiproject';
+import AiagentBlog from './AiagentBlog';
+import HttpservercBlog from './HttpservercBlog';
+import CrawlertsBlog from './CrawlertsBlog';
 import './Refresh.css';
 
 const ScrollToHashElement = () => {
@@ -92,6 +97,7 @@ function App() {
         </div>
         <Routes>
           <Route path="/network" element={<Netproject />} />
+          <Route path="/ai" element={<Aiproject />} />
           <Route path="/cloud" element={<CloudProject />} />
           <Route path="/design" element={<Designproject />} />
           <Route path="/blog/malware-analysis-lab" element={<MalwareBlog />} />
@@ -101,6 +107,10 @@ function App() {
           <Route path="/blog/everyday-photoshop" element={<Everydayphotoshop />} />
           <Route path="/blog/uptime-kuma-setup" element= {<Uptimekumablog />} />
           <Route path="/blog/home-lab" element= {<HomeLabBlog />} />
+          <Route path="/blog/spotify-vim" element={<SpotifyvimBlog />} />
+          <Route path="/blog/ai-agent" element={<AiagentBlog />} />
+          <Route path="/blog/http-server-c" element={<HttpservercBlog />} />
+          <Route path="/blog/crawler-ts" element={<CrawlertsBlog />} />
         </Routes>
       </div>
     </Router>

@@ -35,6 +35,7 @@ const Everydayphotoshop = () => {
     <section>
         <div className="blog-container">
             <h1>Everyday Photoshop.</h1>
+            <h2>Languages and stack</h2><p className="stack-line"><span className="stack-adobe">Adobe Photoshop</span><span className="stack-design">Graphic design</span></p>
             <h2>Summary</h2>
             <p>
             In this project, I challenged myself to design a new poster every day using Adobe Photoshop. Each poster was unique, exploring different themes, styles, and techniques. This daily practice helped me improve my design skills, experiment with various tools and effects in Photoshop, and build a diverse portfolio of creative work. The project not only enhanced my proficiency in Photoshop but also fostered creativity and consistency in my design process.            </p>

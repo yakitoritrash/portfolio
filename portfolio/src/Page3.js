@@ -93,6 +93,11 @@ const Page3 = () => {
             title: "Development & Design Projects",
             description: "Browse through a collection of my design works, blending creativity with technical skills to craft unique and user-centered experiences.",
             path: "/design"
+        },
+        {
+            title: "AI Projects",
+            description: "Explore agent frameworks, model integrations, and practical AI tooling built with clear interfaces and lightweight orchestration.",
+            path: "/ai"
         }
     ];
 

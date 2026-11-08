@@ -13,6 +13,7 @@ const Activedirectoryblog = () => {
     return (
         <div className="blog-container">
             <h1>Setting Up Active Directory Domain Services with Windows Server 2019 in a Virtualized Environment.</h1>
+            <h2>Languages and stack</h2><p className="stack-line"><span className="stack-windows">Windows Server</span><span className="stack-windows">Windows 10</span><span className="stack-network">Active Directory</span><span className="stack-dhcp">DHCP</span><span className="stack-dns">DNS</span><span className="stack-nat">NAT</span></p>
             <h2>Summary</h2>
             <p>
             In this blog, I set up a Windows Server 2019 Domain Controller (DC) and a Windows 10 client within a virtualized environment. Using VirtualBox and VMware, I created an internal network with Active Directory Domain Services (AD DS), DHCP, and RAS/NAT to simulate a real-world environment. This project demonstrates how to configure a small, self-contained network for testing or educational purposes.

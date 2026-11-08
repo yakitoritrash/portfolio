@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Footer from "./Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FaBluesky } from "react-icons/fa6";
 
 const Page4 = () => {
@@ -68,6 +68,9 @@ const Page4 = () => {
                                     </a>
                                     <a href="https://github.com/yakitoritrash" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                         <FontAwesomeIcon icon={faGithub} className="icon" />
+                                    </a>
+                                    <a href="https://www.youtube.com/@yakitoritrash-e5w" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                        <FontAwesomeIcon icon={faYoutube} className="icon" />
                                     </a>
                                 </div>
                         </div>

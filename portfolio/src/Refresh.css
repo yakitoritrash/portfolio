@@ -176,8 +176,8 @@ body:has(.blog-container) .navbar { position: sticky; }
   margin: clamp(34px, 6vw, 76px) auto 90px;
   padding: clamp(22px, 5vw, 56px) !important;
   border: 1px solid var(--line);
-  border-left: 2px solid var(--accent);
-  background: linear-gradient(135deg, rgba(25, 27, 35, .94), rgba(17, 19, 25, .94));
+  border-top: 2px solid var(--accent);
+  background: rgba(19, 21, 27, .72);
   color: var(--text);
   font: 16px/1.85 ui-sans-serif, system-ui, sans-serif;
   overflow-wrap: anywhere;
@@ -186,17 +186,18 @@ body:has(.blog-container) .navbar { position: sticky; }
   color: var(--accent);
   font: 700 clamp(32px, 5.6vw, 64px)/1.1 ui-monospace, SFMono-Regular, Menlo, monospace;
   letter-spacing: -.065em;
-  margin: 0 0 28px;
+  margin: 0 0 36px;
 }
 .blog-container h2, .blog-container h3 {
   color: var(--text);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   line-height: 1.3;
-  margin-top: 42px;
+  margin-top: 48px;
+  margin-bottom: 14px;
 }
 .blog-container h2 { font-size: clamp(20px, 3vw, 28px); }
 .blog-container h3 { font-size: 18px; }
-.blog-container p, .blog-container li { color: #b6b4c0; font: inherit; }
+.blog-container p, .blog-container li { color: #b6b4c0 !important; font: 16px/1.85 ui-sans-serif, system-ui, sans-serif !important; }
 .blog-container li::marker { color: var(--accent); }
 .blog-container img, .blog-container .img, .photoshopimages {
   max-width: 100%;
@@ -205,6 +206,7 @@ body:has(.blog-container) .navbar { position: sticky; }
   border: 1px solid var(--line);
   border-radius: 3px;
 }
+.blog-container img { cursor: zoom-in; }
 .images { align-items: flex-start; }
 .imagelist {
   columns: 3 260px;
@@ -448,6 +450,86 @@ h1, h2, h3, h4 { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, mon
 p, li { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important; }
 button, input, textarea { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 .nav-button, .poster-control { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.stack-tags, .stack-tags span, .stack-line, .stack-line span {
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+/* Blog steps and lists use the same readable terminal treatment everywhere. */
+.blog-container ul,
+.blog-container ol {
+  margin: 24px 0 30px;
+  padding: 0 0 0 28px;
+  border: 0;
+  background: transparent;
+  list-style-position: outside;
+}
+.blog-container ul { list-style-type: "➜  "; }
+.blog-container ol { list-style-type: decimal-leading-zero; }
+.blog-container li {
+  margin: 0 0 12px;
+  padding-left: 4px;
+  color: #b6b4c0 !important;
+  font: 15px/1.8 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+.blog-container li:last-child { margin-bottom: 0; }
+.blog-container li::marker { color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.blog-container pre,
+.blog-container code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}
+.blog-container pre {
+  overflow-x: auto;
+  margin: 24px 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--accent);
+  background: #0b0c10;
+  color: var(--green);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.blog-container code {
+  padding: 2px 5px;
+  border: 1px solid rgba(182, 160, 255, .18);
+  background: rgba(182, 160, 255, .07);
+  color: var(--accent);
+  font-size: .9em;
+}
+.blog-container pre code { padding: 0; border: 0; background: transparent; color: inherit; }
+.stack-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin: 12px 0 28px; }
+.stack-tag, .stack-line { font-family: "Migu 1M", "UDEV Gothic 35", "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important; letter-spacing: .01em; }
+.stack-tags > span:not(.stack-separator) { color: var(--stack-color, var(--muted)); }
+.stack-separator { color: var(--line); }
+.stack-line { color: var(--muted) !important; font: 13px ui-monospace, SFMono-Regular, Menlo, monospace !important; }
+.stack-line { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+.stack-line span { color: var(--stack-color, var(--muted)); }
+.stack-line span + span::before { content: "·"; color: var(--line); margin-right: 10px; }
+.stack-c, .stack-windows { --stack-color: #a9b9c9; }
+.stack-python { --stack-color: #b7ad82; }
+.stack-typescript, .stack-jsdom { --stack-color: #91a9bd; }
+.stack-node, .stack-vitest { --stack-color: #9caf88; }
+.stack-linux, .stack-ubuntu { --stack-color: #b59c83; }
+.stack-aws, .stack-ec2 { --stack-color: #b99e78; }
+.stack-openvpn, .stack-network { --stack-color: #8faeb5; }
+.stack-spotify { --stack-color: #8eae91; }
+.stack-api, .stack-oauth { --stack-color: #ad9cbd; }
+.stack-adobe, .stack-design { --stack-color: #b99ba9; }
+.stack-android, .stack-cloudflare { --stack-color: #a6ad83; }
+.stack-samba, .stack-jellyfin, .stack-vaultwarden { --stack-color: #a494b5; }
+.stack-dhcp, .stack-dns, .stack-nat { --stack-color: #8eabb3; }
+.stack-vm { --stack-color: #b19ca6; }
+.stack-typescript { color: #3178c6; }
+.stack-node { color: #83cd29; }
+.stack-jsdom { color: #f0b35b; }
+.stack-vitest { color: #729b1b; }
+.crawler-screenshots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 20px 0 32px; }
+.crawler-screenshots figure { margin: 0; }
+.crawler-screenshots img { display: block; width: 100%; }
+.clickable-image { cursor: zoom-in; transition: filter .2s ease, opacity .2s ease; }
+.clickable-image:hover { filter: brightness(1.08); opacity: .92; }
+.image-link { display: block; cursor: zoom-in; }
+.crawler-screenshots figcaption { margin-top: 8px; color: var(--muted); font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; }
+@media (max-width: 700px) { .crawler-screenshots { grid-template-columns: 1fr; } }
 
 @media (min-width: 701px) and (max-width: 980px) {
   .network + .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }

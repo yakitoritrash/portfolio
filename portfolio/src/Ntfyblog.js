@@ -13,6 +13,7 @@ const NtfyBlog = () => {
     return (
         <div className="blog-container">
             <h1>Setting up ntfy on Linode.</h1>
+            <h2>Languages and stack</h2><p className="stack-line"><span className="stack-linux">Linux</span><span className="stack-cloudflare">Linode</span><span className="stack-api">ntfy</span><span className="stack-android">Android</span></p>
             <h2>Summary</h2>
             <p>
             In this project, I set up ntfy, a simple and powerful notification service, on a Linode server and connected it to my Android device. This setup allows me to receive real-time notifications from my terminal directly on my Android device, enhancing my workflow and ensuring I never miss important updates.</p>
