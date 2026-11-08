@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import Hero from './Hero';
 import Page2 from './Page2';
 import Page3 from './Page3';
@@ -45,6 +45,18 @@ const ScrollToHashElement = () => {
   return null;
 };
 
+const ScrollToTopOnRouteChange = () => {
+  const { pathname, hash } = useLocation();
+
+  useLayoutEffect(() => {
+    if (!hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+  }, [pathname, hash]);
+
+  return null;
+};
+
 
 function App() {
 
@@ -69,6 +81,7 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
+        <ScrollToTopOnRouteChange />
         {loading && <Loading onComplete={handleLoadingComplete} />}
       <Blobcursor />
         <Navbar />
