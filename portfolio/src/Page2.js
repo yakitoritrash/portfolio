@@ -46,7 +46,6 @@ const Page2 = () => {
             observer = new IntersectionObserver(([entry]) => {
                 if (entry.isIntersecting) {
                     handleMouseOver({ target: heading });
-                    observer.disconnect();
                 }
             }, { threshold: 0.65 });
             observer.observe(heading);
