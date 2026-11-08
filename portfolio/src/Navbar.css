@@ -15,6 +15,8 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    border: none;
+    box-shadow: none;
 }
 
 .logo {
@@ -38,15 +40,6 @@
     margin: 0;
 }
 
-.orangetext {
-    color: #BE5F3B;
-}
-
-.whitetext {
-    color: #EDE6CF;
-}
-
-/* Underline animation for large screens */
 @media (min-width: 601px) {
     .nav-button::after {
         content: '';
@@ -68,6 +61,14 @@
     .nav-button:hover::after {
         opacity: 2;
     }
+}
+
+.orangetext {
+    color: #BE5F3B;
+}
+
+.whitetext {
+    color: #EDE6CF;
 }
 
 /* Hamburger Menu Styles */
@@ -125,6 +126,15 @@
     cursor: pointer;
 }
 
+.nav-links-mobile button {
+    border: 0;
+    background: transparent;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
 /* Shutter animation when active */
 .nav-links-mobile.active {
     height: 200px;
@@ -150,9 +160,5 @@
         margin-right: 10px;
     }
 
-    /* Disable underline animation on small screens */
-    .nav-button::after {
-        display: none;
-    }
 }
 

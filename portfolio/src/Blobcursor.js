@@ -4,6 +4,8 @@ import './Blobcursor.css';
 const Blobcursor = () => {
     useEffect(() => {
         const blob = document.getElementById("blob");
+        const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        if (!canHover) return undefined;
 
         const handlePointerMove = (event) => {
             const { clientX, clientY } = event;

@@ -44,9 +44,10 @@ const Hero = () => {
 
     return(
         <section className="hero">
-            <h1 className="HEROTITLETITLE">HEY, I AM</h1>
-            <h1 className="hero-title" data-value = "KUSHAGRA.">KUSHAGRA.</h1> 
-            <p className="hero-description">A software engineer and IT specialist. I like what I do. I am currently open to work. :O</p>
+            <p className="hero-kicker">~/about — software developer</p>
+            <h1 className="HEROTITLETITLE">HEY, I'M</h1>
+            <h1 className="hero-title" data-value = "KUSHAGRA.">KUSHAGRA.</h1>
+            <p className="hero-description">I like to build stuff :0</p>
         </section>
     );
 };

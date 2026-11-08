@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import logo from "./assets/images/logo.png";
-import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation();
-
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
@@ -19,27 +17,22 @@ const Navbar = () => {
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            const block = window.matchMedia('(max-width: 700px)').matches ? 'start' : 'center';
+            section.scrollIntoView({ behavior: 'smooth', block, inline: 'center' });
             closeMenu(); // Close the menu when a section is clicked
         }
     };
 
     const handleAboutClick = () => {
-        if (location.pathname !== "/") {
-            navigate("/#about", { replace: true });
-            setTimeout(() => scrollToSection("about-section"), 100);
-        } else {
-            scrollToSection("about-section");
-        }
+        navigate("/#about", { replace: true });
+        scrollToSection("about-section");
+        closeMenu();
     };
 
     const handleWorksClick = () => {
-        if (location.pathname !== "/") {
-            navigate("/#work", { replace: true });
-            setTimeout(() => scrollToSection("works"), 100);
-        } else {
-            scrollToSection("works");
-        }
+        navigate("/#work", { replace: true });
+        scrollToSection("works");
+        closeMenu();
     };
 
     const handleResumeClick = () => {
@@ -48,26 +41,23 @@ const Navbar = () => {
     };
 
     const handleContactClick = () => {
-        if (location.pathname !== "/") {
-            navigate("/#contact", { replace: true });
-            setTimeout(() => scrollToSection("Contact"), 100);
-        } else {
-            scrollToSection("Contact");
-        }
+        navigate("/#contact", { replace: true });
+        scrollToSection("Contact");
+        closeMenu();
     };
 
     return (
         <nav className='navbar'>
             <div className='logo'>
-                <RouterLink to="https://yakitoritrash.github.io/portfolio"><img src={logo} alt="Logo" className='logo.png' /></RouterLink>
+                <RouterLink to="/" aria-label="Home"><img src={logo} alt="Kushagra home" className='logo-image' /></RouterLink>
             </div>
 
             {/* Hamburger for small screens */}
-            <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+            <button type="button" className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu} aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={menuOpen}>
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
+            </button>
 
             {/* Default nav links */}
             <ul className='nav-links'>
@@ -79,10 +69,10 @@ const Navbar = () => {
 
             {/* Mobile nav links */}
             <ul className={`nav-links-mobile ${menuOpen ? 'active' : ''}`}>
-                <li><span onClick={handleAboutClick} className='whitetext'>about</span></li>
-                <li><span onClick={handleWorksClick} className='whitetext'>work</span></li>
-                <li><span onClick={handleResumeClick} className='whitetext'>résumè</span></li>
-                <li><span onClick={handleContactClick} className="orangetext">contact</span></li>
+                <li><button onClick={handleAboutClick} className='whitetext'>about</button></li>
+                <li><button onClick={handleWorksClick} className='whitetext'>work</button></li>
+                <li><button onClick={handleResumeClick} className='whitetext'>résumé</button></li>
+                <li><button onClick={handleContactClick} className="orangetext">contact</button></li>
             </ul>
         </nav>
     );

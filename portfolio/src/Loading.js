@@ -26,7 +26,7 @@ const Loading = ({ onComplete }) => {
     }, [onComplete]);
 
     return (
-        <div className={`loading-screen ${fadeOut ? 'fade-out' : ''}`}>
+        <div className={`loading-screen ${fadeOut ? 'fade-out' : ''}`} role="status" aria-live="polite">
             <div className="loading-text">{progress}%</div>
         </div>
     );

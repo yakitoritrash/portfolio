@@ -6,7 +6,7 @@ import Page3 from './Page3';
 import Netproject from './Netproject';
 import MalwareBlog from './MalwareBlog'; // Import your MalwareBlog component
 import Navbar from './Navbar'; // Assuming you have a Navbar component
-import { HashRouter  as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import Awsvpn from './Awsvpn';
 import CloudProject from './Cloudproject';
@@ -19,15 +19,25 @@ import Blobcursor from './Blobcursor';
 import Activedirectoryblog from './Activedirectoryblog';
 import Loading from './Loading';
 import HomeLabBlog from './HomelabBlog';
+import './Refresh.css';
 
 const ScrollToHashElement = () => {
   const { hash } = useLocation();
 
   useEffect(() => {
       if (hash) {
-          const element = document.getElementById(hash.substring(1));
+          const sectionByHash = {
+            about: 'about-section',
+            work: 'works',
+            contact: 'Contact',
+          };
+          const targetId = sectionByHash[hash.substring(1)] || hash.substring(1);
+          const element = document.getElementById(targetId);
           if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
+              requestAnimationFrame(() => {
+                const block = window.matchMedia('(max-width: 700px)').matches ? 'start' : 'center';
+                element.scrollIntoView({ behavior: 'smooth', block, inline: 'center' });
+              });
           }
       }
   }, [hash]);
@@ -57,7 +67,7 @@ function App() {
 };
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         {loading && <Loading onComplete={handleLoadingComplete} />}
       <Blobcursor />

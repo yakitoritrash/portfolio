@@ -75,11 +75,9 @@ const Page2 = () => {
             </div>
             <div className="aboutme">
             <h1 className="photo-title" data-value= "ABOUT ME.">ABOUT ME.</h1>
-            <p className="about-description">I'm a software engineer with a strong interest in cybersecurity, currently pursuing an integrated Master’s degree in Cybersecurity at VIT Bhopal (final year).
+            <p className="about-description">I'm a software developer at Kizora Software, where I've been working since March 2026. I recently completed my integrated Master's degree in Cybersecurity at VIT Bhopal.
 
-My background blends secure systems, software development, and problem-solving — whether it’s writing efficient backend code, working with networks, or understanding how systems behave under the hood. I enjoy building reliable software and thinking critically about security, performance, and design.
-
-Cybersecurity is a core part of how I approach technology. I'm particularly interested in areas like system security, intrusion detection, and creating tools that are both effective and dependable.</p>
+I enjoy building useful software and understanding how systems behave under the hood. My interests span application development, networking, and cybersecurity, with a soft spot for clean setups and dependable tools.</p>
                 <div className="callme">
                     <p className="whiteme">Want to work together?</p>
                     <a href="contact" className="orangeme" onClick={handleContactClick}>Drop me a line.</a>
